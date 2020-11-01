@@ -1,0 +1,4 @@
+wget https://github.com/ethereum/solidity/releases/download/v0.5.17/soljson.js
+npm i truffle@5.1.21
+mv node_modules/\@openzeppelin node_modules/\@openzeppelinV2
+ ./node_modules/.bin/truffle compile
