@@ -6,11 +6,12 @@
         "ethlint": "^1.2.5",
         "husky": "^4.3.0",
         "prettier": "^2.1.2",
-        "prettier-plugin-solidity": "^1.0.0-alpha.57",
+        "prettier-plugin-solidity": "^1.0.0-alpha.59",
         "pretty-quick": "^3.0.2",
         "truffle": "^5.1.21"
     },
     "scripts": {
+            "lint:sol": "prettier --write \"contracts/**/*.sol\"  \"interfaces/**/*.sol\" --loglevel debug --plugin prettier-plugin-solidity",
         "lint": "pretty-quick --pattern '**/*.*(sol|json|md)' --verbose",
         "lint:check": "prettier --check **/*.sol **/*.json **/*.md",
         "lint:fix": "pretty-quick --pattern '**/*.*(sol|json|md)' --staged --verbose"
