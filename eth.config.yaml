@@ -1,0 +1,8 @@
+contracts:
+  Token:
+    fields:
+      smallInteger: Int
+      createdAt: Timestamp
+      symbol: String
+      decimals: Int
+      nodeType: Address
