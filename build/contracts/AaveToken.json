@@ -1,0 +1,232 @@
+{
+  "contractName": "AaveToken",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "underlyingAssetAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"underlyingAssetAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/V2yearn/interfaces/aave/AaveToken.sol\":\"AaveToken\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/V2yearn/interfaces/aave/AaveToken.sol\":{\"keccak256\":\"0x8b7510c3958f05ea730e109ed3a9f4c5ee00d39d507468831d8b0844044b7164\",\"urls\":[\"bzz-raw://da2d1a291fb50231b582c335cedd2fc8ba31ec777e2ae4feb66e933832a1af28\",\"dweb:/ipfs/QmehA1pRz3KNoaUdqgFJe5n22Ni9HiALEzxEYLAmHiux1r\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.5.17;\n\ninterface AaveToken {\n    function underlyingAssetAddress() external view returns (address);\n}\n",
+  "sourcePath": "/Users/sbacha/V2yearn/interfaces/aave/AaveToken.sol",
+  "ast": {
+    "absolutePath": "/Users/sbacha/V2yearn/interfaces/aave/AaveToken.sol",
+    "exportedSymbols": {
+      "AaveToken": [
+        16915
+      ]
+    },
+    "id": 16916,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16909,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:25"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 16915,
+        "linearizedBaseContracts": [
+          16915
+        ],
+        "name": "AaveToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 16914,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "underlyingAssetAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16910,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "83:2:25"
+            },
+            "returnParameters": {
+              "id": 16913,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16912,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16914,
+                  "src": "109:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 16911,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "109:7:25",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "108:9:25"
+            },
+            "scope": 16915,
+            "src": "52:66:25",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 16916,
+        "src": "26:94:25"
+      }
+    ],
+    "src": "0:121:25"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/sbacha/V2yearn/interfaces/aave/AaveToken.sol",
+    "exportedSymbols": {
+      "AaveToken": [
+        16915
+      ]
+    },
+    "id": 16916,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16909,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:25"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 16915,
+        "linearizedBaseContracts": [
+          16915
+        ],
+        "name": "AaveToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 16914,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "underlyingAssetAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16910,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "83:2:25"
+            },
+            "returnParameters": {
+              "id": 16913,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16912,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16914,
+                  "src": "109:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 16911,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "109:7:25",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "108:9:25"
+            },
+            "scope": 16915,
+            "src": "52:66:25",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 16916,
+        "src": "26:94:25"
+      }
+    ],
+    "src": "0:121:25"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-11-01T01:33:12.899Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,6 +1,7 @@
 __pycache__
 .history
 .hypothesis/
-build/
-reports/
+#build/
+#reports/
 node_modules/
+.DS_Store
