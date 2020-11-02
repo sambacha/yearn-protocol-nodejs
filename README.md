@@ -1,4 +1,69 @@
-# Yearn Protocol
+
+# yearn-nodejs specific 
+
+```bash
+wrapper-ci.sh
+revert_trace.sh
+nodejs_install.sh
+npm-wrapper.bash
+truffle-config.js
+package.json
+```
+
+#### npm package.json
+
+```json
+{
+    "name": "yearn-protocol-ci-env-only",
+    "description": "yearn protocol CI - NOT FOR PRODUCTION USAGE",
+    "main": "truffle-config.js",
+    "directories": {
+        "test": "test"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-conventional": "^11.0.0",
+        "apollo-ethereum": "0.1.1",
+        "ethlint": "^1.2.5",
+        "husky": "^4.3.0",
+        "prettier": "^2.1.2",
+        "prettier-plugin-solidity": "^1.0.0-alpha.59",
+        "pretty-quick": "^3.0.2",
+        "truffle": "^5.1.21",
+        "@openzeppelin/test-environment": "^0.1.4",
+        "@truffle/debug-utils": "^4.1.5",
+        "@truffle/hdwallet-provider": "^1.0.35",
+        "chai": "^4.2.0",
+        "ganache-cli": "^6.9.1",
+        "mocha": "^7.2.0",
+        "solidity-coverage": "^0.7.5",
+        "truffle-flattener": "^1.4.4"
+    },
+    "scripts": {
+        "ganache": "ganache-cli",
+        "coverage": "node --max-old-space-size=4096 ./node_modules/.bin/truffle run coverage --network development",
+        "test": "truffle test",
+        "lint:sol": "prettier --write \"contracts/**/*.sol\"  \"interfaces/**/*.sol\" --loglevel debug --plugin prettier-plugin-solidity",
+        "lint": "pretty-quick --pattern '**/*.*(sol|json|md)' --verbose",
+        "lint:check": "prettier --check **/*.sol **/*.json **/*.md",
+        "lint:fix": "pretty-quick --pattern '**/*.*(sol|json|md)' --staged --verbose"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn lint:fix",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "dependencies": {
+        "@openzeppelin/contracts": "^2.5.1"
+    }
+}
+```
+
+
+
+
+### Yearn Protocol
 
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://github.com/iearn-finance/yearn-protocol/blob/master/LICENSE)
 ![Lint](https://github.com/iearn-finance/yearn-protocol/workflows/Lint/badge.svg)
