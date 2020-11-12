@@ -21,7 +21,11 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install codecov -g
-        npm install
+        npm install @openzeppelin/test-environment
+        npm install --global ganache-cli
+        npm instlal
+        chmod +x SolidityCI/Coverage.js
+        node SolidityCI/Coverage.js
         codecov
       env:
         CI: true
