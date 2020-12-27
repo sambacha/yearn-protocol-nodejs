@@ -1,9 +1,10 @@
 {
     "name": "@yfi/nodejs",
+    "version": "0.1.0",
     "description": "yearn protocol CI - NOT FOR PRODUCTION USAGE",
     "main": "truffle-config.js",
     "directories": {
-      "test": "test"
+        "test": "test"
     },
     "devDependencies": {
         "@commitlint/cli": "^11.0.0",
@@ -25,9 +26,9 @@
         "truffle-flattener": "^1.4.4"
     },
     "scripts": {
-            "ganache": "ganache-cli",
-    "coverage": "node --max-old-space-size=4096 ./node_modules/.bin/truffle run coverage --network development",
-    "test": "truffle test",
+        "ganache": "ganache-cli",
+        "coverage": "node --max-old-space-size=4096 ./node_modules/.bin/truffle run coverage --network development",
+        "test": "truffle test",
         "lint:sol": "prettier --write \"contracts/**/*.sol\"  \"interfaces/**/*.sol\" --loglevel debug --plugin prettier-plugin-solidity",
         "lint": "pretty-quick --pattern '**/*.*(sol|json|md)' --verbose",
         "lint:check": "prettier --check **/*.sol **/*.json **/*.md",
