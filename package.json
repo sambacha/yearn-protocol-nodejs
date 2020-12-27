@@ -1,5 +1,5 @@
 {
-    "name": "yearn-protocol-ci-env-only",
+    "name": "@yfi/nodejs",
     "description": "yearn protocol CI - NOT FOR PRODUCTION USAGE",
     "main": "truffle-config.js",
     "directories": {
