@@ -79,7 +79,7 @@ jobs:
             - node_modules
       - run:
           name: Slither
-          command: ./run_slither.sh
+          command: ./scripts/run_slither.sh
   test:
     docker:
       - image: circleci/node:12
