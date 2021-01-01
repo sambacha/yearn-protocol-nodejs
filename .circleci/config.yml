@@ -60,7 +60,7 @@ jobs:
             - v7-sec-toolbox-deps-
       - run:
           name: Install node and NPM
-          command: ./ci/install_node_npm.sh
+          command: ./scripts/circleci-nodejs.sh
       - run:
           name: Change user
           command: sudo su ethsec
