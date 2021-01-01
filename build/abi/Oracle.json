@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {
     "constant": true,
     "inputs": [
@@ -36,3 +37,42 @@
     "type": "function"
   }
 ]
+=======
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "reserve",
+                "type": "address"
+            }
+        ],
+        "name": "getAssetPrice",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "latestAnswer",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
+>>>>>>> 8e01ae98f5321e73b6b6b129467aa10c89ed4b44

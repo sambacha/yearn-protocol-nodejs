@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {
     "constant": true,
     "inputs": [],
@@ -15,3 +16,21 @@
     "type": "function"
   }
 ]
+=======
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "underlyingAssetAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
+>>>>>>> 8e01ae98f5321e73b6b6b129467aa10c89ed4b44

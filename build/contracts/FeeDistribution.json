@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "contractName": "FeeDistribution",
   "abi": [
     {
@@ -307,3 +308,289 @@
     "methods": {}
   }
 }
+=======
+    "contractName": "FeeDistribution",
+    "abi": [
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "claim",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"claim\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/FeeDistribution.sol\":\"FeeDistribution\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/FeeDistribution.sol\":{\"keccak256\":\"0x12f41d036664d686792dc94d944b3e8e954c6c7506ca427165d8541aba4714e3\",\"urls\":[\"bzz-raw://dd3abb3c309615950eb8af92767a7bba3c6978a9463e0adfc037d11cc877c8e1\",\"dweb:/ipfs/Qmf9rWWXR5PoNQe2Kem55mn55vgkexEbK57UBjFBjBmnaG\"]}},\"version\":1}",
+    "bytecode": "0x",
+    "deployedBytecode": "0x",
+    "sourceMap": "",
+    "deployedSourceMap": "",
+    "source": "pragma solidity ^0.5.17;\n\ninterface FeeDistribution {\n    function claim(address) external returns (uint256);\n}\n",
+    "sourcePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/FeeDistribution.sol",
+    "ast": {
+        "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/FeeDistribution.sol",
+        "exportedSymbols": {
+            "FeeDistribution": [25864]
+        },
+        "id": 25865,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 25856,
+                "literals": ["solidity", "^", "0.5", ".17"],
+                "nodeType": "PragmaDirective",
+                "src": "0:24:38"
+            },
+            {
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "interface",
+                "documentation": null,
+                "fullyImplemented": false,
+                "id": 25864,
+                "linearizedBaseContracts": [25864],
+                "name": "FeeDistribution",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "body": null,
+                        "documentation": null,
+                        "id": 25863,
+                        "implemented": false,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "claim",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 25859,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 25858,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 25863,
+                                    "src": "73:7:38",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 25857,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "73:7:38",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "72:9:38"
+                        },
+                        "returnParameters": {
+                            "id": 25862,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 25861,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 25863,
+                                    "src": "100:7:38",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 25860,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "100:7:38",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "99:9:38"
+                        },
+                        "scope": 25864,
+                        "src": "58:51:38",
+                        "stateMutability": "nonpayable",
+                        "superFunction": null,
+                        "visibility": "external"
+                    }
+                ],
+                "scope": 25865,
+                "src": "26:85:38"
+            }
+        ],
+        "src": "0:112:38"
+    },
+    "legacyAST": {
+        "attributes": {
+            "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/FeeDistribution.sol",
+            "exportedSymbols": {
+                "FeeDistribution": [25864]
+            }
+        },
+        "children": [
+            {
+                "attributes": {
+                    "literals": ["solidity", "^", "0.5", ".17"]
+                },
+                "id": 25856,
+                "name": "PragmaDirective",
+                "src": "0:24:38"
+            },
+            {
+                "attributes": {
+                    "baseContracts": [null],
+                    "contractDependencies": [null],
+                    "contractKind": "interface",
+                    "documentation": null,
+                    "fullyImplemented": false,
+                    "linearizedBaseContracts": [25864],
+                    "name": "FeeDistribution",
+                    "scope": 25865
+                },
+                "children": [
+                    {
+                        "attributes": {
+                            "body": null,
+                            "documentation": null,
+                            "implemented": false,
+                            "isConstructor": false,
+                            "kind": "function",
+                            "modifiers": [null],
+                            "name": "claim",
+                            "scope": 25864,
+                            "stateMutability": "nonpayable",
+                            "superFunction": null,
+                            "visibility": "external"
+                        },
+                        "children": [
+                            {
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "constant": false,
+                                            "name": "",
+                                            "scope": 25863,
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "type": "address",
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "name": "address",
+                                                    "stateMutability": "nonpayable",
+                                                    "type": "address"
+                                                },
+                                                "id": 25857,
+                                                "name": "ElementaryTypeName",
+                                                "src": "73:7:38"
+                                            }
+                                        ],
+                                        "id": 25858,
+                                        "name": "VariableDeclaration",
+                                        "src": "73:7:38"
+                                    }
+                                ],
+                                "id": 25859,
+                                "name": "ParameterList",
+                                "src": "72:9:38"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "constant": false,
+                                            "name": "",
+                                            "scope": 25863,
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "type": "uint256",
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "name": "uint256",
+                                                    "type": "uint256"
+                                                },
+                                                "id": 25860,
+                                                "name": "ElementaryTypeName",
+                                                "src": "100:7:38"
+                                            }
+                                        ],
+                                        "id": 25861,
+                                        "name": "VariableDeclaration",
+                                        "src": "100:7:38"
+                                    }
+                                ],
+                                "id": 25862,
+                                "name": "ParameterList",
+                                "src": "99:9:38"
+                            }
+                        ],
+                        "id": 25863,
+                        "name": "FunctionDefinition",
+                        "src": "58:51:38"
+                    }
+                ],
+                "id": 25864,
+                "name": "ContractDefinition",
+                "src": "26:85:38"
+            }
+        ],
+        "id": 25865,
+        "name": "SourceUnit",
+        "src": "0:112:38"
+    },
+    "compiler": {
+        "name": "solc",
+        "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+    },
+    "networks": {},
+    "schemaVersion": "3.3.3",
+    "updatedAt": "2021-01-01T09:28:49.387Z",
+    "devdoc": {
+        "methods": {}
+    },
+    "userdoc": {
+        "methods": {}
+    }
+}
+>>>>>>> 8e01ae98f5321e73b6b6b129467aa10c89ed4b44
