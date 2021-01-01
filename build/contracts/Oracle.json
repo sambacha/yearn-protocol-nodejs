@@ -38,26 +38,26 @@
             "type": "function"
         }
     ],
-    "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"reserve\",\"type\":\"address\"}],\"name\":\"getAssetPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"latestAnswer\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/V2yearn/interfaces/aave/Oracle.sol\":\"Oracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/V2yearn/interfaces/aave/Oracle.sol\":{\"keccak256\":\"0x713bf65bee9f1d05b478b7fafce0857f298c2b09d6ae8a0cbfa539e162ded413\",\"urls\":[\"bzz-raw://91b2bc0998399c7eb7dd29c4c52548c68e5420ff7aa3c2ffd6e085b6b28fbe8a\",\"dweb:/ipfs/QmYbSbx4WKcEksbxXaouuYPjLVbufADvRjkNRmfrwT4j7o\"]}},\"version\":1}",
+    "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"reserve\",\"type\":\"address\"}],\"name\":\"getAssetPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"latestAnswer\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/aave/Oracle.sol\":\"Oracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/aave/Oracle.sol\":{\"keccak256\":\"0x713bf65bee9f1d05b478b7fafce0857f298c2b09d6ae8a0cbfa539e162ded413\",\"urls\":[\"bzz-raw://91b2bc0998399c7eb7dd29c4c52548c68e5420ff7aa3c2ffd6e085b6b28fbe8a\",\"dweb:/ipfs/QmYbSbx4WKcEksbxXaouuYPjLVbufADvRjkNRmfrwT4j7o\"]}},\"version\":1}",
     "bytecode": "0x",
     "deployedBytecode": "0x",
     "sourceMap": "",
     "deployedSourceMap": "",
     "source": "pragma solidity ^0.5.17;\n\ninterface Oracle {\n    function getAssetPrice(address reserve) external view returns (uint256);\n\n    function latestAnswer() external view returns (uint256);\n}\n",
-    "sourcePath": "/Users/sbacha/V2yearn/interfaces/aave/Oracle.sol",
+    "sourcePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/aave/Oracle.sol",
     "ast": {
-        "absolutePath": "/Users/sbacha/V2yearn/interfaces/aave/Oracle.sol",
+        "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/aave/Oracle.sol",
         "exportedSymbols": {
-            "Oracle": [16948]
+            "Oracle": [25699]
         },
-        "id": 16949,
+        "id": 25700,
         "nodeType": "SourceUnit",
         "nodes": [
             {
-                "id": 16935,
+                "id": 25686,
                 "literals": ["solidity", "^", "0.5", ".17"],
                 "nodeType": "PragmaDirective",
-                "src": "0:24:27"
+                "src": "0:24:34"
             },
             {
                 "baseContracts": [],
@@ -65,31 +65,31 @@
                 "contractKind": "interface",
                 "documentation": null,
                 "fullyImplemented": false,
-                "id": 16948,
-                "linearizedBaseContracts": [16948],
+                "id": 25699,
+                "linearizedBaseContracts": [25699],
                 "name": "Oracle",
                 "nodeType": "ContractDefinition",
                 "nodes": [
                     {
                         "body": null,
                         "documentation": null,
-                        "id": 16942,
+                        "id": 25693,
                         "implemented": false,
                         "kind": "function",
                         "modifiers": [],
                         "name": "getAssetPrice",
                         "nodeType": "FunctionDefinition",
                         "parameters": {
-                            "id": 16938,
+                            "id": 25689,
                             "nodeType": "ParameterList",
                             "parameters": [
                                 {
                                     "constant": false,
-                                    "id": 16937,
+                                    "id": 25688,
                                     "name": "reserve",
                                     "nodeType": "VariableDeclaration",
-                                    "scope": 16942,
-                                    "src": "72:15:27",
+                                    "scope": 25693,
+                                    "src": "72:15:34",
                                     "stateVariable": false,
                                     "storageLocation": "default",
                                     "typeDescriptions": {
@@ -97,10 +97,10 @@
                                         "typeString": "address"
                                     },
                                     "typeName": {
-                                        "id": 16936,
+                                        "id": 25687,
                                         "name": "address",
                                         "nodeType": "ElementaryTypeName",
-                                        "src": "72:7:27",
+                                        "src": "72:7:34",
                                         "stateMutability": "nonpayable",
                                         "typeDescriptions": {
                                             "typeIdentifier": "t_address",
@@ -111,19 +111,19 @@
                                     "visibility": "internal"
                                 }
                             ],
-                            "src": "71:17:27"
+                            "src": "71:17:34"
                         },
                         "returnParameters": {
-                            "id": 16941,
+                            "id": 25692,
                             "nodeType": "ParameterList",
                             "parameters": [
                                 {
                                     "constant": false,
-                                    "id": 16940,
+                                    "id": 25691,
                                     "name": "",
                                     "nodeType": "VariableDeclaration",
-                                    "scope": 16942,
-                                    "src": "112:7:27",
+                                    "scope": 25693,
+                                    "src": "112:7:34",
                                     "stateVariable": false,
                                     "storageLocation": "default",
                                     "typeDescriptions": {
@@ -131,10 +131,10 @@
                                         "typeString": "uint256"
                                     },
                                     "typeName": {
-                                        "id": 16939,
+                                        "id": 25690,
                                         "name": "uint256",
                                         "nodeType": "ElementaryTypeName",
-                                        "src": "112:7:27",
+                                        "src": "112:7:34",
                                         "typeDescriptions": {
                                             "typeIdentifier": "t_uint256",
                                             "typeString": "uint256"
@@ -144,10 +144,10 @@
                                     "visibility": "internal"
                                 }
                             ],
-                            "src": "111:9:27"
+                            "src": "111:9:34"
                         },
-                        "scope": 16948,
-                        "src": "49:72:27",
+                        "scope": 25699,
+                        "src": "49:72:34",
                         "stateMutability": "view",
                         "superFunction": null,
                         "visibility": "external"
@@ -155,29 +155,29 @@
                     {
                         "body": null,
                         "documentation": null,
-                        "id": 16947,
+                        "id": 25698,
                         "implemented": false,
                         "kind": "function",
                         "modifiers": [],
                         "name": "latestAnswer",
                         "nodeType": "FunctionDefinition",
                         "parameters": {
-                            "id": 16943,
+                            "id": 25694,
                             "nodeType": "ParameterList",
                             "parameters": [],
-                            "src": "148:2:27"
+                            "src": "148:2:34"
                         },
                         "returnParameters": {
-                            "id": 16946,
+                            "id": 25697,
                             "nodeType": "ParameterList",
                             "parameters": [
                                 {
                                     "constant": false,
-                                    "id": 16945,
+                                    "id": 25696,
                                     "name": "",
                                     "nodeType": "VariableDeclaration",
-                                    "scope": 16947,
-                                    "src": "174:7:27",
+                                    "scope": 25698,
+                                    "src": "174:7:34",
                                     "stateVariable": false,
                                     "storageLocation": "default",
                                     "typeDescriptions": {
@@ -185,10 +185,10 @@
                                         "typeString": "uint256"
                                     },
                                     "typeName": {
-                                        "id": 16944,
+                                        "id": 25695,
                                         "name": "uint256",
                                         "nodeType": "ElementaryTypeName",
-                                        "src": "174:7:27",
+                                        "src": "174:7:34",
                                         "typeDescriptions": {
                                             "typeIdentifier": "t_uint256",
                                             "typeString": "uint256"
@@ -198,196 +198,215 @@
                                     "visibility": "internal"
                                 }
                             ],
-                            "src": "173:9:27"
+                            "src": "173:9:34"
                         },
-                        "scope": 16948,
-                        "src": "127:56:27",
+                        "scope": 25699,
+                        "src": "127:56:34",
                         "stateMutability": "view",
                         "superFunction": null,
                         "visibility": "external"
                     }
                 ],
-                "scope": 16949,
-                "src": "26:159:27"
+                "scope": 25700,
+                "src": "26:159:34"
             }
         ],
-        "src": "0:186:27"
+        "src": "0:186:34"
     },
     "legacyAST": {
-        "absolutePath": "/Users/sbacha/V2yearn/interfaces/aave/Oracle.sol",
-        "exportedSymbols": {
-            "Oracle": [16948]
+        "attributes": {
+            "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/aave/Oracle.sol",
+            "exportedSymbols": {
+                "Oracle": [25699]
+            }
         },
-        "id": 16949,
-        "nodeType": "SourceUnit",
-        "nodes": [
+        "children": [
             {
-                "id": 16935,
-                "literals": ["solidity", "^", "0.5", ".17"],
-                "nodeType": "PragmaDirective",
-                "src": "0:24:27"
+                "attributes": {
+                    "literals": ["solidity", "^", "0.5", ".17"]
+                },
+                "id": 25686,
+                "name": "PragmaDirective",
+                "src": "0:24:34"
             },
             {
-                "baseContracts": [],
-                "contractDependencies": [],
-                "contractKind": "interface",
-                "documentation": null,
-                "fullyImplemented": false,
-                "id": 16948,
-                "linearizedBaseContracts": [16948],
-                "name": "Oracle",
-                "nodeType": "ContractDefinition",
-                "nodes": [
+                "attributes": {
+                    "baseContracts": [null],
+                    "contractDependencies": [null],
+                    "contractKind": "interface",
+                    "documentation": null,
+                    "fullyImplemented": false,
+                    "linearizedBaseContracts": [25699],
+                    "name": "Oracle",
+                    "scope": 25700
+                },
+                "children": [
                     {
-                        "body": null,
-                        "documentation": null,
-                        "id": 16942,
-                        "implemented": false,
-                        "kind": "function",
-                        "modifiers": [],
-                        "name": "getAssetPrice",
-                        "nodeType": "FunctionDefinition",
-                        "parameters": {
-                            "id": 16938,
-                            "nodeType": "ParameterList",
-                            "parameters": [
-                                {
-                                    "constant": false,
-                                    "id": 16937,
-                                    "name": "reserve",
-                                    "nodeType": "VariableDeclaration",
-                                    "scope": 16942,
-                                    "src": "72:15:27",
-                                    "stateVariable": false,
-                                    "storageLocation": "default",
-                                    "typeDescriptions": {
-                                        "typeIdentifier": "t_address",
-                                        "typeString": "address"
-                                    },
-                                    "typeName": {
-                                        "id": 16936,
-                                        "name": "address",
-                                        "nodeType": "ElementaryTypeName",
-                                        "src": "72:7:27",
-                                        "stateMutability": "nonpayable",
-                                        "typeDescriptions": {
-                                            "typeIdentifier": "t_address",
-                                            "typeString": "address"
-                                        }
-                                    },
-                                    "value": null,
-                                    "visibility": "internal"
-                                }
-                            ],
-                            "src": "71:17:27"
+                        "attributes": {
+                            "body": null,
+                            "documentation": null,
+                            "implemented": false,
+                            "isConstructor": false,
+                            "kind": "function",
+                            "modifiers": [null],
+                            "name": "getAssetPrice",
+                            "scope": 25699,
+                            "stateMutability": "view",
+                            "superFunction": null,
+                            "visibility": "external"
                         },
-                        "returnParameters": {
-                            "id": 16941,
-                            "nodeType": "ParameterList",
-                            "parameters": [
-                                {
-                                    "constant": false,
-                                    "id": 16940,
-                                    "name": "",
-                                    "nodeType": "VariableDeclaration",
-                                    "scope": 16942,
-                                    "src": "112:7:27",
-                                    "stateVariable": false,
-                                    "storageLocation": "default",
-                                    "typeDescriptions": {
-                                        "typeIdentifier": "t_uint256",
-                                        "typeString": "uint256"
-                                    },
-                                    "typeName": {
-                                        "id": 16939,
-                                        "name": "uint256",
-                                        "nodeType": "ElementaryTypeName",
-                                        "src": "112:7:27",
-                                        "typeDescriptions": {
-                                            "typeIdentifier": "t_uint256",
-                                            "typeString": "uint256"
-                                        }
-                                    },
-                                    "value": null,
-                                    "visibility": "internal"
-                                }
-                            ],
-                            "src": "111:9:27"
-                        },
-                        "scope": 16948,
-                        "src": "49:72:27",
-                        "stateMutability": "view",
-                        "superFunction": null,
-                        "visibility": "external"
+                        "children": [
+                            {
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "constant": false,
+                                            "name": "reserve",
+                                            "scope": 25693,
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "type": "address",
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "name": "address",
+                                                    "stateMutability": "nonpayable",
+                                                    "type": "address"
+                                                },
+                                                "id": 25687,
+                                                "name": "ElementaryTypeName",
+                                                "src": "72:7:34"
+                                            }
+                                        ],
+                                        "id": 25688,
+                                        "name": "VariableDeclaration",
+                                        "src": "72:15:34"
+                                    }
+                                ],
+                                "id": 25689,
+                                "name": "ParameterList",
+                                "src": "71:17:34"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "constant": false,
+                                            "name": "",
+                                            "scope": 25693,
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "type": "uint256",
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "name": "uint256",
+                                                    "type": "uint256"
+                                                },
+                                                "id": 25690,
+                                                "name": "ElementaryTypeName",
+                                                "src": "112:7:34"
+                                            }
+                                        ],
+                                        "id": 25691,
+                                        "name": "VariableDeclaration",
+                                        "src": "112:7:34"
+                                    }
+                                ],
+                                "id": 25692,
+                                "name": "ParameterList",
+                                "src": "111:9:34"
+                            }
+                        ],
+                        "id": 25693,
+                        "name": "FunctionDefinition",
+                        "src": "49:72:34"
                     },
                     {
-                        "body": null,
-                        "documentation": null,
-                        "id": 16947,
-                        "implemented": false,
-                        "kind": "function",
-                        "modifiers": [],
-                        "name": "latestAnswer",
-                        "nodeType": "FunctionDefinition",
-                        "parameters": {
-                            "id": 16943,
-                            "nodeType": "ParameterList",
-                            "parameters": [],
-                            "src": "148:2:27"
+                        "attributes": {
+                            "body": null,
+                            "documentation": null,
+                            "implemented": false,
+                            "isConstructor": false,
+                            "kind": "function",
+                            "modifiers": [null],
+                            "name": "latestAnswer",
+                            "scope": 25699,
+                            "stateMutability": "view",
+                            "superFunction": null,
+                            "visibility": "external"
                         },
-                        "returnParameters": {
-                            "id": 16946,
-                            "nodeType": "ParameterList",
-                            "parameters": [
-                                {
-                                    "constant": false,
-                                    "id": 16945,
-                                    "name": "",
-                                    "nodeType": "VariableDeclaration",
-                                    "scope": 16947,
-                                    "src": "174:7:27",
-                                    "stateVariable": false,
-                                    "storageLocation": "default",
-                                    "typeDescriptions": {
-                                        "typeIdentifier": "t_uint256",
-                                        "typeString": "uint256"
-                                    },
-                                    "typeName": {
-                                        "id": 16944,
-                                        "name": "uint256",
-                                        "nodeType": "ElementaryTypeName",
-                                        "src": "174:7:27",
-                                        "typeDescriptions": {
-                                            "typeIdentifier": "t_uint256",
-                                            "typeString": "uint256"
-                                        }
-                                    },
-                                    "value": null,
-                                    "visibility": "internal"
-                                }
-                            ],
-                            "src": "173:9:27"
-                        },
-                        "scope": 16948,
-                        "src": "127:56:27",
-                        "stateMutability": "view",
-                        "superFunction": null,
-                        "visibility": "external"
+                        "children": [
+                            {
+                                "attributes": {
+                                    "parameters": [null]
+                                },
+                                "children": [],
+                                "id": 25694,
+                                "name": "ParameterList",
+                                "src": "148:2:34"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "attributes": {
+                                            "constant": false,
+                                            "name": "",
+                                            "scope": 25698,
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "type": "uint256",
+                                            "value": null,
+                                            "visibility": "internal"
+                                        },
+                                        "children": [
+                                            {
+                                                "attributes": {
+                                                    "name": "uint256",
+                                                    "type": "uint256"
+                                                },
+                                                "id": 25695,
+                                                "name": "ElementaryTypeName",
+                                                "src": "174:7:34"
+                                            }
+                                        ],
+                                        "id": 25696,
+                                        "name": "VariableDeclaration",
+                                        "src": "174:7:34"
+                                    }
+                                ],
+                                "id": 25697,
+                                "name": "ParameterList",
+                                "src": "173:9:34"
+                            }
+                        ],
+                        "id": 25698,
+                        "name": "FunctionDefinition",
+                        "src": "127:56:34"
                     }
                 ],
-                "scope": 16949,
-                "src": "26:159:27"
+                "id": 25699,
+                "name": "ContractDefinition",
+                "src": "26:159:34"
             }
         ],
-        "src": "0:186:27"
+        "id": 25700,
+        "name": "SourceUnit",
+        "src": "0:186:34"
     },
     "compiler": {
         "name": "solc",
         "version": "0.5.17+commit.d19bba13.Emscripten.clang"
     },
     "networks": {},
-    "schemaVersion": "3.1.0",
-    "updatedAt": "2020-11-01T01:33:12.900Z",
+    "schemaVersion": "3.3.3",
+    "updatedAt": "2021-01-01T09:28:49.443Z",
     "devdoc": {
         "methods": {}
     },
