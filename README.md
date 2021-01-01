@@ -1,5 +1,4 @@
-
-# yearn-nodejs specific 
+# yearn-nodejs specific
 
 ```bash
 wrapper-ci.sh
@@ -59,9 +58,6 @@ package.json
     }
 }
 ```
-
-
-
 
 ### Yearn Protocol
 
