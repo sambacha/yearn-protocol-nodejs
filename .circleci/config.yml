@@ -1,6 +1,7 @@
 # CircleCI v2
 # v0.1.0
 # Slither and Security Tooling CI/CD 
+# @dev: ssh/appi key's for automated deployment's and updating 3rd party services (e.g. etherscan)
 # SPDX-License-Identifier: ISC
 
 version: 2
@@ -46,71 +47,7 @@ jobs:
           key: contracts-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Lint
-          command: yarn run lint
-
-  slither:
-    docker:
-      - image: trailofbits/eth-security-toolbox
-    working_directory: ~/contracts
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v7-sec-toolbox-deps-{{ checksum "yarn.lock" }}
-            - v7-sec-toolbox-deps-
-      - run:
-          name: Install node and NPM
-          command: ./ci/install_node_npm.sh
-      - run:
-          name: Change user
-          command: sudo su ethsec
-      - run:
-          name: Reclaim ownership
-          command: sudo chown -R $(whoami) ~/.npm ~/.config
-      - run:
-          name: Install Prereqs
-          command: sudo apt-get update && sudo apt-get install -y libudev-dev libusb-1.0-0-dev python-dev
-      - run:
-          name: Install Dependencies
-          command: sudo npm install -g yarn && yarn 
-      - save_cache:
-          key: v7-sec-toolbox-deps-{{ checksum "yarn.lock" }}
-          paths:
-            - node_modules
-      - run:
-          name: Slither
-          command: ./run_slither.sh
-  test:
-    docker:
-      - image: circleci/node:12
-      - image: trufflesuite/ganache-cli
-        command: ganache-cli -i 1234 -l 9000000 -p 9545
-    working_directory: ~/contracts
-    steps:
-      - restore_cache:
-          key: contracts-completed-build-{{ .Environment.CIRCLE_SHA1 }}
-      - run:
-          name: Run tests
-          # Note: this is a workaround for a  truffle issue.
-          command: |
-            cd ..
-            mkdir truffle_workaround
-            mv contracts truffle_workaround/
-            cd truffle_workaround/contracts
-            yarn run test
-  coverage:
-    docker:
-      - image: circleci/node:12
-    working_directory: ~/contracts
-    steps:
-      - checkout
-      - restore_cache:
-          key: contracts-{{ .Environment.CIRCLE_SHA1 }}
-      - run:
-          name: Run coverage
-          command: ./tests/coverage.sh ~/contracts/build/core
-      - store_artifacts:
-          path: contracts/build/coverage
+          command: yarn run lint:prettier
 
 workflows:
   version: 2
@@ -121,16 +58,9 @@ workflows:
           context: api_keys
           requires:
             - checkout_and_install
-      - slither
-      - build:
-          requires:
-            - checkout_and_install
       - lint:
           requires:
             - checkout_and_install
-      - test:
-          context: api_keys
-          requires:
-            - build
+
 
 
