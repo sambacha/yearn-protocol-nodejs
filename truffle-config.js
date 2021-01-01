@@ -1,22 +1,10 @@
-/*
- * NB: since truffle-hdwallet-provider 0.0.5 you must wrap HDWallet providers in a
- * function when declaring them. Failure to do so will cause commands to hang. ex:
- * ```
- * mainnet: {
- *     provider: function() {
- *       return new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/<infura-key>')
- *     },
- *     network_id: '1',
- *     gas: 4500000,
- *     gasPrice: 10000000000,
- *   },
- */
+// Truffle Configuration
 require("dotenv").config();
 
 const Web3 = require("web3");
 
 const web3 = new Web3();
-const HDWalletProvider = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 // defaults
 const DEFAULT_ADDRESS_COUNT = 10;
@@ -51,7 +39,8 @@ module.exports = {
     api_keys: {
         etherscan: etherscanApiKey,
     },
-    plugins: ["truffle-plugin-verify"],
+    plugins: ["truffle-plugin-verify", "@chainsafe/truffle-plugin-abigen"
+],
     networks: {
         geth: {
             host: "localhost",

@@ -1,5 +1,6 @@
 # yearn-nodejs specific
 
+;
 ```bash
 wrapper-ci.sh
 revert_trace.sh
@@ -8,6 +9,19 @@ npm-wrapper.bash
 truffle-config.js
 package.json
 ```
+
+### Overview 
+
+Changes between this refernce and the offical yearn-protocol 
+
+    @openzeppelin/contracts 3.1.0
+    @openzeppelin/contracts 2.5.1
+
+    Solidity Versions:
+    0.5.17
+    0.6.12
+
+
 
 #### npm package.json
 
@@ -149,3 +163,5 @@ You can read more about yearn finance on our documentation [webpage](https://doc
 ### Discussion
 
 For questions not covered in the docs, please visit [our Discord server](http://discord.yearn.finance).
+
+
