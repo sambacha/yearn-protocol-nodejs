@@ -1,6 +1,6 @@
 {
     "name": "@yfi/yearn-protocol-nodejs",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Reference version of the Yearn Protocol in NodeJS/Truffle",
     "main": "truffle-config..js",
     "scripts": {
