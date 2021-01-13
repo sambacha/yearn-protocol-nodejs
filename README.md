@@ -1,5 +1,8 @@
 # yearn-nodejs specific
 
+## Convert Brownie to NodeJS see the `scripts/` folder 
+
+
 ;
 ```bash
 wrapper-ci.sh
