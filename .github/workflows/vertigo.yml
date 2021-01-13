@@ -1,0 +1,40 @@
+name: vertigo 
+
+on:
+  push:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
+        node: [ '12' ]
+
+    steps:
+
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '12'
+        check-latest: true
+    - run: npm install -g truffle
+    - run: npm instakk -g ganache-cli 
+    - run: npm install -g codecov
+    - run: npm install 
+    - run: npm run-script compile
+
+
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip3 install --user eth-vertigo
+    - name: Vertigo
+      run: |
+        ganache-cli -p 8545
+        vertigo run --network development
