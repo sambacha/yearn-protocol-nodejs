@@ -1,6 +1,6 @@
 {
     "name": "@yfi/yearn-protocol-nodejs",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "Reference version of the Yearn Protocol in NodeJS/Truffle",
     "main": "truffle-config..js",
     "scripts": {
@@ -20,21 +20,24 @@
         "web3": "^1.3.0"
     },
     "devDependencies": {
-        "pretty-quick": "^3.1.0",
-        "codecov": "^3.8.1",
-        "@openzeppelin/test-environment": "^0.1.4",
-        "@truffle/debug-utils": "^5.0.7",
-        "ethlint": "^1.2.5",
-        "husky": "^4.3.0",
-        "prettier": "2.1.2",
-        "prettier-plugin-solidity": "1.0.0-alpha.59",
         "@chainsafe/truffle-plugin-abigen": "0.0.2",
         "@commitlint/cli": "^11.0.0",
         "@commitlint/config-conventional": "^11.0.0",
-        "truffle": "^5.1.21",
+        "@openzeppelin/test-environment": "^0.1.4",
+        "@truffle/debug-utils": "^5.0.7",
+        "codecov": "^3.8.1",
+        "ethlint": "^1.2.5",
+        "husky": "^4.3.0",
         "mocha": "^8.2.1",
+        "prettier": "2.1.2",
+        "prettier-plugin-solidity": "1.0.0-alpha.59",
+        "pretty-quick": "^3.1.0",
         "solc": "^0.5.17",
         "solidity-coverage": "^0.7.13",
-        "solium": "^1.2.5"
+        "solium": "^1.2.5",
+        "truffle": "^5.1.21"
+    },
+    "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
     }
 }
