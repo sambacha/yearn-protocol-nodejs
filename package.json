@@ -11,7 +11,8 @@
         "deploy:ganache": "truffle migrate --reset --network ganache",
         "deploy:rinkeby": "truffle migrate --reset --network infuraRinkeby",
         "deploy:mainnet-dryrun": "truffle migrate --reset --network --dry-run infuraMainnet",
-        "deploy:mainnet": "truffle migrate --reset --network infuraMainnet"
+        "deploy:mainnet": "truffle migrate --reset --network infuraMainnet",
+        "postinstall": " mv node_modules/@openzeppelin node_modules/@openzeppelinV2"
     },
     "dependencies": {
         "@openzeppelin/contracts": "^2.5.1",
