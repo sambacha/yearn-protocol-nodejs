@@ -1,2 +1,5 @@
+sync_repo.sh
+SolidityCI/
+scripts/
 .ci
 .github
