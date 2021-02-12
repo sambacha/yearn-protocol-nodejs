@@ -75,14 +75,14 @@
     "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/weth/WETH.sol",
     "exportedSymbols": {
       "WETH": [
-        26428
+        34345
       ]
     },
-    "id": 26429,
+    "id": 34346,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 26407,
+        "id": 34324,
         "literals": [
           "solidity",
           "^",
@@ -90,7 +90,7 @@
           ".17"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:47"
+        "src": "0:24:55"
       },
       {
         "baseContracts": [],
@@ -98,9 +98,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 26428,
+        "id": 34345,
         "linearizedBaseContracts": [
-          26428
+          34345
         ],
         "name": "WETH",
         "nodeType": "ContractDefinition",
@@ -108,26 +108,26 @@
           {
             "body": null,
             "documentation": null,
-            "id": 26410,
+            "id": 34327,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 26408,
+              "id": 34325,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "63:2:47"
+              "src": "63:2:55"
             },
             "returnParameters": {
-              "id": 26409,
+              "id": 34326,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "82:0:47"
+              "src": "82:0:55"
             },
-            "scope": 26428,
-            "src": "47:36:47",
+            "scope": 34345,
+            "src": "47:36:55",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
@@ -135,23 +135,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 26415,
+            "id": 34332,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "withdraw",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 26413,
+              "id": 34330,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 26412,
+                  "id": 34329,
                   "name": "wad",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26415,
-                  "src": "107:11:47",
+                  "scope": 34332,
+                  "src": "107:11:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -159,10 +159,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 26411,
+                    "id": 34328,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "107:7:47",
+                    "src": "107:7:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -172,16 +172,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "106:13:47"
+              "src": "106:13:55"
             },
             "returnParameters": {
-              "id": 26414,
+              "id": 34331,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "128:0:47"
+              "src": "128:0:55"
             },
-            "scope": 26428,
-            "src": "89:40:47",
+            "scope": 34345,
+            "src": "89:40:55",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -189,21 +189,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 26421,
+            "id": 34338,
             "name": "Deposit",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 26420,
+              "id": 34337,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 26417,
+                  "id": 34334,
                   "indexed": true,
                   "name": "dst",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26421,
-                  "src": "149:19:47",
+                  "scope": 34338,
+                  "src": "149:19:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -211,10 +211,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 26416,
+                    "id": 34333,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "149:7:47",
+                    "src": "149:7:55",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -226,12 +226,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 26419,
+                  "id": 34336,
                   "indexed": false,
                   "name": "wad",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26421,
-                  "src": "170:11:47",
+                  "scope": 34338,
+                  "src": "170:11:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -239,10 +239,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 26418,
+                    "id": 34335,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "170:7:47",
+                    "src": "170:7:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -252,28 +252,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "148:34:47"
+              "src": "148:34:55"
             },
-            "src": "135:48:47"
+            "src": "135:48:55"
           },
           {
             "anonymous": false,
             "documentation": null,
-            "id": 26427,
+            "id": 34344,
             "name": "Withdrawal",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 26426,
+              "id": 34343,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 26423,
+                  "id": 34340,
                   "indexed": true,
                   "name": "src",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26427,
-                  "src": "205:19:47",
+                  "scope": 34344,
+                  "src": "205:19:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -281,10 +281,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 26422,
+                    "id": 34339,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "205:7:47",
+                    "src": "205:7:55",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -296,12 +296,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 26425,
+                  "id": 34342,
                   "indexed": false,
                   "name": "wad",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26427,
-                  "src": "226:11:47",
+                  "scope": 34344,
+                  "src": "226:11:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -309,10 +309,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 26424,
+                    "id": 34341,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "226:7:47",
+                    "src": "226:7:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -322,23 +322,23 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "204:34:47"
+              "src": "204:34:55"
             },
-            "src": "188:51:47"
+            "src": "188:51:55"
           }
         ],
-        "scope": 26429,
-        "src": "26:215:47"
+        "scope": 34346,
+        "src": "26:215:55"
       }
     ],
-    "src": "0:242:47"
+    "src": "0:242:55"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/weth/WETH.sol",
       "exportedSymbols": {
         "WETH": [
-          26428
+          34345
         ]
       }
     },
@@ -352,9 +352,9 @@
             ".17"
           ]
         },
-        "id": 26407,
+        "id": 34324,
         "name": "PragmaDirective",
-        "src": "0:24:47"
+        "src": "0:24:55"
       },
       {
         "attributes": {
@@ -368,10 +368,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            26428
+            34345
           ],
           "name": "WETH",
-          "scope": 26429
+          "scope": 34346
         },
         "children": [
           {
@@ -385,7 +385,7 @@
                 null
               ],
               "name": "deposit",
-              "scope": 26428,
+              "scope": 34345,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "external"
@@ -398,9 +398,9 @@
                   ]
                 },
                 "children": [],
-                "id": 26408,
+                "id": 34325,
                 "name": "ParameterList",
-                "src": "63:2:47"
+                "src": "63:2:55"
               },
               {
                 "attributes": {
@@ -409,14 +409,14 @@
                   ]
                 },
                 "children": [],
-                "id": 26409,
+                "id": 34326,
                 "name": "ParameterList",
-                "src": "82:0:47"
+                "src": "82:0:55"
               }
             ],
-            "id": 26410,
+            "id": 34327,
             "name": "FunctionDefinition",
-            "src": "47:36:47"
+            "src": "47:36:55"
           },
           {
             "attributes": {
@@ -429,7 +429,7 @@
                 null
               ],
               "name": "withdraw",
-              "scope": 26428,
+              "scope": 34345,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -441,7 +441,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "wad",
-                      "scope": 26415,
+                      "scope": 34332,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -454,19 +454,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 26411,
+                        "id": 34328,
                         "name": "ElementaryTypeName",
-                        "src": "107:7:47"
+                        "src": "107:7:55"
                       }
                     ],
-                    "id": 26412,
+                    "id": 34329,
                     "name": "VariableDeclaration",
-                    "src": "107:11:47"
+                    "src": "107:11:55"
                   }
                 ],
-                "id": 26413,
+                "id": 34330,
                 "name": "ParameterList",
-                "src": "106:13:47"
+                "src": "106:13:55"
               },
               {
                 "attributes": {
@@ -475,14 +475,14 @@
                   ]
                 },
                 "children": [],
-                "id": 26414,
+                "id": 34331,
                 "name": "ParameterList",
-                "src": "128:0:47"
+                "src": "128:0:55"
               }
             ],
-            "id": 26415,
+            "id": 34332,
             "name": "FunctionDefinition",
-            "src": "89:40:47"
+            "src": "89:40:55"
           },
           {
             "attributes": {
@@ -498,7 +498,7 @@
                       "constant": false,
                       "indexed": true,
                       "name": "dst",
-                      "scope": 26421,
+                      "scope": 34338,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -512,21 +512,21 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 26416,
+                        "id": 34333,
                         "name": "ElementaryTypeName",
-                        "src": "149:7:47"
+                        "src": "149:7:55"
                       }
                     ],
-                    "id": 26417,
+                    "id": 34334,
                     "name": "VariableDeclaration",
-                    "src": "149:19:47"
+                    "src": "149:19:55"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "wad",
-                      "scope": 26421,
+                      "scope": 34338,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -539,24 +539,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 26418,
+                        "id": 34335,
                         "name": "ElementaryTypeName",
-                        "src": "170:7:47"
+                        "src": "170:7:55"
                       }
                     ],
-                    "id": 26419,
+                    "id": 34336,
                     "name": "VariableDeclaration",
-                    "src": "170:11:47"
+                    "src": "170:11:55"
                   }
                 ],
-                "id": 26420,
+                "id": 34337,
                 "name": "ParameterList",
-                "src": "148:34:47"
+                "src": "148:34:55"
               }
             ],
-            "id": 26421,
+            "id": 34338,
             "name": "EventDefinition",
-            "src": "135:48:47"
+            "src": "135:48:55"
           },
           {
             "attributes": {
@@ -572,7 +572,7 @@
                       "constant": false,
                       "indexed": true,
                       "name": "src",
-                      "scope": 26427,
+                      "scope": 34344,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -586,21 +586,21 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 26422,
+                        "id": 34339,
                         "name": "ElementaryTypeName",
-                        "src": "205:7:47"
+                        "src": "205:7:55"
                       }
                     ],
-                    "id": 26423,
+                    "id": 34340,
                     "name": "VariableDeclaration",
-                    "src": "205:19:47"
+                    "src": "205:19:55"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "wad",
-                      "scope": 26427,
+                      "scope": 34344,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -613,42 +613,42 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 26424,
+                        "id": 34341,
                         "name": "ElementaryTypeName",
-                        "src": "226:7:47"
+                        "src": "226:7:55"
                       }
                     ],
-                    "id": 26425,
+                    "id": 34342,
                     "name": "VariableDeclaration",
-                    "src": "226:11:47"
+                    "src": "226:11:55"
                   }
                 ],
-                "id": 26426,
+                "id": 34343,
                 "name": "ParameterList",
-                "src": "204:34:47"
+                "src": "204:34:55"
               }
             ],
-            "id": 26427,
+            "id": 34344,
             "name": "EventDefinition",
-            "src": "188:51:47"
+            "src": "188:51:55"
           }
         ],
-        "id": 26428,
+        "id": 34345,
         "name": "ContractDefinition",
-        "src": "26:215:47"
+        "src": "26:215:55"
       }
     ],
-    "id": 26429,
+    "id": 34346,
     "name": "SourceUnit",
-    "src": "0:242:47"
+    "src": "0:242:55"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.3",
-  "updatedAt": "2021-01-01T09:28:49.501Z",
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-02-12T05:40:28.453Z",
   "devdoc": {
     "methods": {}
   },

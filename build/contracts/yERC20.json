@@ -58,14 +58,14 @@
     "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/yearn/IToken.sol",
     "exportedSymbols": {
       "yERC20": [
-        26677
+        34599
       ]
     },
-    "id": 26678,
+    "id": 34600,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 26661,
+        "id": 34583,
         "literals": [
           "solidity",
           "^",
@@ -73,7 +73,7 @@
           ".17"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:24:55"
+        "src": "33:24:63"
       },
       {
         "baseContracts": [],
@@ -81,9 +81,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 26677,
+        "id": 34599,
         "linearizedBaseContracts": [
-          26677
+          34599
         ],
         "name": "yERC20",
         "nodeType": "ContractDefinition",
@@ -91,23 +91,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 26666,
+            "id": 34588,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 26664,
+              "id": 34586,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 26663,
+                  "id": 34585,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26666,
-                  "src": "138:15:55",
+                  "scope": 34588,
+                  "src": "138:15:63",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -115,10 +115,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 26662,
+                    "id": 34584,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "138:7:55",
+                    "src": "138:7:63",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -128,16 +128,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "137:17:55"
+              "src": "137:17:63"
             },
             "returnParameters": {
-              "id": 26665,
+              "id": 34587,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "163:0:55"
+              "src": "163:0:63"
             },
-            "scope": 26677,
-            "src": "121:43:55",
+            "scope": 34599,
+            "src": "121:43:63",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -145,23 +145,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 26671,
+            "id": 34593,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "withdraw",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 26669,
+              "id": 34591,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 26668,
+                  "id": 34590,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26671,
-                  "src": "188:15:55",
+                  "scope": 34593,
+                  "src": "188:15:63",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -169,10 +169,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 26667,
+                    "id": 34589,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "188:7:55",
+                    "src": "188:7:63",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -182,16 +182,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "187:17:55"
+              "src": "187:17:63"
             },
             "returnParameters": {
-              "id": 26670,
+              "id": 34592,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "213:0:55"
+              "src": "213:0:63"
             },
-            "scope": 26677,
-            "src": "170:44:55",
+            "scope": 34599,
+            "src": "170:44:63",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -199,29 +199,29 @@
           {
             "body": null,
             "documentation": null,
-            "id": 26676,
+            "id": 34598,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getPricePerFullShare",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 26672,
+              "id": 34594,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "249:2:55"
+              "src": "249:2:63"
             },
             "returnParameters": {
-              "id": 26675,
+              "id": 34597,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 26674,
+                  "id": 34596,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26676,
-                  "src": "275:7:55",
+                  "scope": 34598,
+                  "src": "275:7:63",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -229,10 +229,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 26673,
+                    "id": 34595,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "275:7:55",
+                    "src": "275:7:63",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -242,27 +242,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "274:9:55"
+              "src": "274:9:63"
             },
-            "scope": 26677,
-            "src": "220:64:55",
+            "scope": 34599,
+            "src": "220:64:63",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 26678,
-        "src": "98:188:55"
+        "scope": 34600,
+        "src": "98:188:63"
       }
     ],
-    "src": "33:254:55"
+    "src": "33:254:63"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/yearn/IToken.sol",
       "exportedSymbols": {
         "yERC20": [
-          26677
+          34599
         ]
       }
     },
@@ -276,9 +276,9 @@
             ".17"
           ]
         },
-        "id": 26661,
+        "id": 34583,
         "name": "PragmaDirective",
-        "src": "33:24:55"
+        "src": "33:24:63"
       },
       {
         "attributes": {
@@ -292,10 +292,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            26677
+            34599
           ],
           "name": "yERC20",
-          "scope": 26678
+          "scope": 34600
         },
         "children": [
           {
@@ -309,7 +309,7 @@
                 null
               ],
               "name": "deposit",
-              "scope": 26677,
+              "scope": 34599,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -321,7 +321,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_amount",
-                      "scope": 26666,
+                      "scope": 34588,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -334,19 +334,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 26662,
+                        "id": 34584,
                         "name": "ElementaryTypeName",
-                        "src": "138:7:55"
+                        "src": "138:7:63"
                       }
                     ],
-                    "id": 26663,
+                    "id": 34585,
                     "name": "VariableDeclaration",
-                    "src": "138:15:55"
+                    "src": "138:15:63"
                   }
                 ],
-                "id": 26664,
+                "id": 34586,
                 "name": "ParameterList",
-                "src": "137:17:55"
+                "src": "137:17:63"
               },
               {
                 "attributes": {
@@ -355,14 +355,14 @@
                   ]
                 },
                 "children": [],
-                "id": 26665,
+                "id": 34587,
                 "name": "ParameterList",
-                "src": "163:0:55"
+                "src": "163:0:63"
               }
             ],
-            "id": 26666,
+            "id": 34588,
             "name": "FunctionDefinition",
-            "src": "121:43:55"
+            "src": "121:43:63"
           },
           {
             "attributes": {
@@ -375,7 +375,7 @@
                 null
               ],
               "name": "withdraw",
-              "scope": 26677,
+              "scope": 34599,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -387,7 +387,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_amount",
-                      "scope": 26671,
+                      "scope": 34593,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -400,19 +400,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 26667,
+                        "id": 34589,
                         "name": "ElementaryTypeName",
-                        "src": "188:7:55"
+                        "src": "188:7:63"
                       }
                     ],
-                    "id": 26668,
+                    "id": 34590,
                     "name": "VariableDeclaration",
-                    "src": "188:15:55"
+                    "src": "188:15:63"
                   }
                 ],
-                "id": 26669,
+                "id": 34591,
                 "name": "ParameterList",
-                "src": "187:17:55"
+                "src": "187:17:63"
               },
               {
                 "attributes": {
@@ -421,14 +421,14 @@
                   ]
                 },
                 "children": [],
-                "id": 26670,
+                "id": 34592,
                 "name": "ParameterList",
-                "src": "213:0:55"
+                "src": "213:0:63"
               }
             ],
-            "id": 26671,
+            "id": 34593,
             "name": "FunctionDefinition",
-            "src": "170:44:55"
+            "src": "170:44:63"
           },
           {
             "attributes": {
@@ -441,7 +441,7 @@
                 null
               ],
               "name": "getPricePerFullShare",
-              "scope": 26677,
+              "scope": 34599,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "external"
@@ -454,9 +454,9 @@
                   ]
                 },
                 "children": [],
-                "id": 26672,
+                "id": 34594,
                 "name": "ParameterList",
-                "src": "249:2:55"
+                "src": "249:2:63"
               },
               {
                 "children": [
@@ -464,7 +464,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 26676,
+                      "scope": 34598,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -477,42 +477,42 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 26673,
+                        "id": 34595,
                         "name": "ElementaryTypeName",
-                        "src": "275:7:55"
+                        "src": "275:7:63"
                       }
                     ],
-                    "id": 26674,
+                    "id": 34596,
                     "name": "VariableDeclaration",
-                    "src": "275:7:55"
+                    "src": "275:7:63"
                   }
                 ],
-                "id": 26675,
+                "id": 34597,
                 "name": "ParameterList",
-                "src": "274:9:55"
+                "src": "274:9:63"
               }
             ],
-            "id": 26676,
+            "id": 34598,
             "name": "FunctionDefinition",
-            "src": "220:64:55"
+            "src": "220:64:63"
           }
         ],
-        "id": 26677,
+        "id": 34599,
         "name": "ContractDefinition",
-        "src": "98:188:55"
+        "src": "98:188:63"
       }
     ],
-    "id": 26678,
+    "id": 34600,
     "name": "SourceUnit",
-    "src": "33:254:55"
+    "src": "33:254:63"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.3",
-  "updatedAt": "2021-01-01T09:28:49.507Z",
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-02-12T05:40:28.458Z",
   "devdoc": {
     "methods": {}
   },

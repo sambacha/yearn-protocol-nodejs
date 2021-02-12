@@ -9,7 +9,6 @@
           "name": "holder",
           "type": "address"
         }
-<<<<<<< HEAD
       ],
       "name": "claimComp",
       "outputs": [],
@@ -29,14 +28,14 @@
     "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/cream/Controller.sol",
     "exportedSymbols": {
       "Creamtroller": [
-        25762
+        33642
       ]
     },
-    "id": 25763,
+    "id": 33643,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 25756,
+        "id": 33636,
         "literals": [
           "solidity",
           "^",
@@ -44,7 +43,7 @@
           ".17"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:24:36"
+        "src": "33:24:44"
       },
       {
         "baseContracts": [],
@@ -52,9 +51,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 25762,
+        "id": 33642,
         "linearizedBaseContracts": [
-          25762
+          33642
         ],
         "name": "Creamtroller",
         "nodeType": "ContractDefinition",
@@ -62,23 +61,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 25761,
+            "id": 33641,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "claimComp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 25759,
+              "id": 33639,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 25758,
+                  "id": 33638,
                   "name": "holder",
                   "nodeType": "VariableDeclaration",
-                  "scope": 25761,
-                  "src": "107:14:36",
+                  "scope": 33641,
+                  "src": "107:14:44",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -86,10 +85,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 25757,
+                    "id": 33637,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "107:7:36",
+                    "src": "107:7:44",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -100,33 +99,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "106:16:36"
+              "src": "106:16:44"
             },
             "returnParameters": {
-              "id": 25760,
+              "id": 33640,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "131:0:36"
+              "src": "131:0:44"
             },
-            "scope": 25762,
-            "src": "88:44:36",
+            "scope": 33642,
+            "src": "88:44:44",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 25763,
-        "src": "59:75:36"
+        "scope": 33643,
+        "src": "59:75:44"
       }
     ],
-    "src": "33:102:36"
+    "src": "33:102:44"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/cream/Controller.sol",
       "exportedSymbols": {
         "Creamtroller": [
-          25762
+          33642
         ]
       }
     },
@@ -140,9 +139,9 @@
             ".17"
           ]
         },
-        "id": 25756,
+        "id": 33636,
         "name": "PragmaDirective",
-        "src": "33:24:36"
+        "src": "33:24:44"
       },
       {
         "attributes": {
@@ -156,10 +155,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            25762
+            33642
           ],
           "name": "Creamtroller",
-          "scope": 25763
+          "scope": 33643
         },
         "children": [
           {
@@ -173,7 +172,7 @@
                 null
               ],
               "name": "claimComp",
-              "scope": 25762,
+              "scope": 33642,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -185,7 +184,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "holder",
-                      "scope": 25761,
+                      "scope": 33641,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -199,19 +198,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 25757,
+                        "id": 33637,
                         "name": "ElementaryTypeName",
-                        "src": "107:7:36"
+                        "src": "107:7:44"
                       }
                     ],
-                    "id": 25758,
+                    "id": 33638,
                     "name": "VariableDeclaration",
-                    "src": "107:14:36"
+                    "src": "107:14:44"
                   }
                 ],
-                "id": 25759,
+                "id": 33639,
                 "name": "ParameterList",
-                "src": "106:16:36"
+                "src": "106:16:44"
               },
               {
                 "attributes": {
@@ -220,32 +219,32 @@
                   ]
                 },
                 "children": [],
-                "id": 25760,
+                "id": 33640,
                 "name": "ParameterList",
-                "src": "131:0:36"
+                "src": "131:0:44"
               }
             ],
-            "id": 25761,
+            "id": 33641,
             "name": "FunctionDefinition",
-            "src": "88:44:36"
+            "src": "88:44:44"
           }
         ],
-        "id": 25762,
+        "id": 33642,
         "name": "ContractDefinition",
-        "src": "59:75:36"
+        "src": "59:75:44"
       }
     ],
-    "id": 25763,
+    "id": 33643,
     "name": "SourceUnit",
-    "src": "33:102:36"
+    "src": "33:102:44"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.3",
-  "updatedAt": "2021-01-01T09:28:49.445Z",
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-02-12T05:40:28.416Z",
   "devdoc": {
     "methods": {}
   },
@@ -253,215 +252,3 @@
     "methods": {}
   }
 }
-=======
-    ],
-    "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"holder\",\"type\":\"address\"}],\"name\":\"claimComp\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/cream/Controller.sol\":\"Creamtroller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/cream/Controller.sol\":{\"keccak256\":\"0x0408ed81391137e68f55c66ccd286d3f441016ee215c0030090036d6ded5e2e4\",\"urls\":[\"bzz-raw://41c7a3510246352fee978675f41495c705f4a43c9407793dbefa267e2e182520\",\"dweb:/ipfs/QmTAdrnd4fRCdBijwTkaSXpJBdxu57A55Tto5UNzLqiMNu\"]}},\"version\":1}",
-    "bytecode": "0x",
-    "deployedBytecode": "0x",
-    "sourceMap": "",
-    "deployedSourceMap": "",
-    "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.5.17;\n\ninterface Creamtroller {\n    function claimComp(address holder) external;\n}\n",
-    "sourcePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/cream/Controller.sol",
-    "ast": {
-        "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/cream/Controller.sol",
-        "exportedSymbols": {
-            "Creamtroller": [25762]
-        },
-        "id": 25763,
-        "nodeType": "SourceUnit",
-        "nodes": [
-            {
-                "id": 25756,
-                "literals": ["solidity", "^", "0.5", ".17"],
-                "nodeType": "PragmaDirective",
-                "src": "33:24:36"
-            },
-            {
-                "baseContracts": [],
-                "contractDependencies": [],
-                "contractKind": "interface",
-                "documentation": null,
-                "fullyImplemented": false,
-                "id": 25762,
-                "linearizedBaseContracts": [25762],
-                "name": "Creamtroller",
-                "nodeType": "ContractDefinition",
-                "nodes": [
-                    {
-                        "body": null,
-                        "documentation": null,
-                        "id": 25761,
-                        "implemented": false,
-                        "kind": "function",
-                        "modifiers": [],
-                        "name": "claimComp",
-                        "nodeType": "FunctionDefinition",
-                        "parameters": {
-                            "id": 25759,
-                            "nodeType": "ParameterList",
-                            "parameters": [
-                                {
-                                    "constant": false,
-                                    "id": 25758,
-                                    "name": "holder",
-                                    "nodeType": "VariableDeclaration",
-                                    "scope": 25761,
-                                    "src": "107:14:36",
-                                    "stateVariable": false,
-                                    "storageLocation": "default",
-                                    "typeDescriptions": {
-                                        "typeIdentifier": "t_address",
-                                        "typeString": "address"
-                                    },
-                                    "typeName": {
-                                        "id": 25757,
-                                        "name": "address",
-                                        "nodeType": "ElementaryTypeName",
-                                        "src": "107:7:36",
-                                        "stateMutability": "nonpayable",
-                                        "typeDescriptions": {
-                                            "typeIdentifier": "t_address",
-                                            "typeString": "address"
-                                        }
-                                    },
-                                    "value": null,
-                                    "visibility": "internal"
-                                }
-                            ],
-                            "src": "106:16:36"
-                        },
-                        "returnParameters": {
-                            "id": 25760,
-                            "nodeType": "ParameterList",
-                            "parameters": [],
-                            "src": "131:0:36"
-                        },
-                        "scope": 25762,
-                        "src": "88:44:36",
-                        "stateMutability": "nonpayable",
-                        "superFunction": null,
-                        "visibility": "external"
-                    }
-                ],
-                "scope": 25763,
-                "src": "59:75:36"
-            }
-        ],
-        "src": "33:102:36"
-    },
-    "legacyAST": {
-        "attributes": {
-            "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/cream/Controller.sol",
-            "exportedSymbols": {
-                "Creamtroller": [25762]
-            }
-        },
-        "children": [
-            {
-                "attributes": {
-                    "literals": ["solidity", "^", "0.5", ".17"]
-                },
-                "id": 25756,
-                "name": "PragmaDirective",
-                "src": "33:24:36"
-            },
-            {
-                "attributes": {
-                    "baseContracts": [null],
-                    "contractDependencies": [null],
-                    "contractKind": "interface",
-                    "documentation": null,
-                    "fullyImplemented": false,
-                    "linearizedBaseContracts": [25762],
-                    "name": "Creamtroller",
-                    "scope": 25763
-                },
-                "children": [
-                    {
-                        "attributes": {
-                            "body": null,
-                            "documentation": null,
-                            "implemented": false,
-                            "isConstructor": false,
-                            "kind": "function",
-                            "modifiers": [null],
-                            "name": "claimComp",
-                            "scope": 25762,
-                            "stateMutability": "nonpayable",
-                            "superFunction": null,
-                            "visibility": "external"
-                        },
-                        "children": [
-                            {
-                                "children": [
-                                    {
-                                        "attributes": {
-                                            "constant": false,
-                                            "name": "holder",
-                                            "scope": 25761,
-                                            "stateVariable": false,
-                                            "storageLocation": "default",
-                                            "type": "address",
-                                            "value": null,
-                                            "visibility": "internal"
-                                        },
-                                        "children": [
-                                            {
-                                                "attributes": {
-                                                    "name": "address",
-                                                    "stateMutability": "nonpayable",
-                                                    "type": "address"
-                                                },
-                                                "id": 25757,
-                                                "name": "ElementaryTypeName",
-                                                "src": "107:7:36"
-                                            }
-                                        ],
-                                        "id": 25758,
-                                        "name": "VariableDeclaration",
-                                        "src": "107:14:36"
-                                    }
-                                ],
-                                "id": 25759,
-                                "name": "ParameterList",
-                                "src": "106:16:36"
-                            },
-                            {
-                                "attributes": {
-                                    "parameters": [null]
-                                },
-                                "children": [],
-                                "id": 25760,
-                                "name": "ParameterList",
-                                "src": "131:0:36"
-                            }
-                        ],
-                        "id": 25761,
-                        "name": "FunctionDefinition",
-                        "src": "88:44:36"
-                    }
-                ],
-                "id": 25762,
-                "name": "ContractDefinition",
-                "src": "59:75:36"
-            }
-        ],
-        "id": 25763,
-        "name": "SourceUnit",
-        "src": "33:102:36"
-    },
-    "compiler": {
-        "name": "solc",
-        "version": "0.5.17+commit.d19bba13.Emscripten.clang"
-    },
-    "networks": {},
-    "schemaVersion": "3.3.3",
-    "updatedAt": "2021-01-01T09:28:49.445Z",
-    "devdoc": {
-        "methods": {}
-    },
-    "userdoc": {
-        "methods": {}
-    }
-}
->>>>>>> 8e01ae98f5321e73b6b6b129467aa10c89ed4b44

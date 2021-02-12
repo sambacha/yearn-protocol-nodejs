@@ -2,7 +2,7 @@
 require("dotenv").config();
 
 const Web3 = require("web3");
-
+// @openzeppelinV2/=$(pwd)/node_modules/@openzeppelin/ contracts/*.sol
 const web3 = new Web3();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 

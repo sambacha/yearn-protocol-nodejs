@@ -1,12 +1,12 @@
 pragma solidity ^0.5.17;
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
-import "@openzeppelin/contracts/ownership/Ownable.sol";
+import "@openzeppelinV2/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelinV2/contracts/math/SafeMath.sol";
+import "@openzeppelinV2/contracts/utils/Address.sol";
+import "@openzeppelinV2/contracts/token/ERC20/SafeERC20.sol";
+import "@openzeppelinV2/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelinV2/contracts/token/ERC20/ERC20Detailed.sol";
+import "@openzeppelinV2/contracts/ownership/Ownable.sol";
 
 import "../../interfaces/yearn/IController.sol";
 

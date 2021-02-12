@@ -2,9 +2,9 @@
 
 pragma solidity ^0.5.17;
 
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/utils/EnumerableSet.sol";
+import "@openzeppelinV2/contracts/math/SafeMath.sol";
+import "@openzeppelinV2/contracts/utils/Address.sol";
+import "@openzeppelinV2/contracts/utils/EnumerableSet.sol";
 
 import "../../interfaces/yearn/IController.sol";
 import "../../interfaces/yearn/IStrategy.sol";
@@ -91,6 +91,10 @@ contract YRegistry {
         if (!controllers.contains(_controller)) {
             controllers.add(_controller);
         }
+    }
+
+    function removeVault(address _vault) public onlyGovernance {
+        vaults.remove(_vault);
     }
 
     function getVaultData(address _vault)
@@ -182,6 +186,7 @@ contract YRegistry {
         external
         view
         returns (
+            address[] memory vaultsAddresses,
             address[] memory controllerArray,
             address[] memory tokenArray,
             address[] memory strategyArray,
@@ -189,6 +194,7 @@ contract YRegistry {
             bool[] memory isDelegatedArray
         )
     {
+        vaultsAddresses = new address[](vaults.length());
         controllerArray = new address[](vaults.length());
         tokenArray = new address[](vaults.length());
         strategyArray = new address[](vaults.length());
@@ -196,6 +202,7 @@ contract YRegistry {
         isDelegatedArray = new bool[](vaults.length());
 
         for (uint256 i = 0; i < vaults.length(); i++) {
+            vaultsAddresses[i] = vaults.get(i);
             (address _controller, address _token, address _strategy, bool _isWrapped, bool _isDelegated) = getVaultData(vaults.get(i));
             controllerArray[i] = _controller;
             tokenArray[i] = _token;

@@ -6,6 +6,12 @@ interface ICurveFi {
     function get_virtual_price() external view returns (uint256);
 
     function add_liquidity(
+        // EURs
+        uint256[2] calldata amounts,
+        uint256 min_mint_amount
+    ) external;
+
+    function add_liquidity(
         // sBTC pool
         uint256[3] calldata amounts,
         uint256 min_mint_amount
@@ -28,6 +34,13 @@ interface ICurveFi {
     ) external;
 
     function exchange(
+        int128 from,
+        int128 to,
+        uint256 _from_amount,
+        uint256 _min_to_amount
+    ) external;
+
+    function exchange_underlying(
         int128 from,
         int128 to,
         uint256 _from_amount,
