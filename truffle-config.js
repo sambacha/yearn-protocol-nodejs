@@ -6,11 +6,6 @@ const Web3 = require("web3");
 const web3 = new Web3();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
-var @openzeppelinV2 = require("$(pwd)/node_modules/@openzeppelin");
-
-
-
-
 // defaults
 const DEFAULT_ADDRESS_COUNT = 10;
 const DEFAULT_GAS_WEI = "4600000";

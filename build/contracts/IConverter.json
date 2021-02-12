@@ -1,0 +1,309 @@
+{
+  "contractName": "IConverter",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "convert",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/yearn/IConverter.sol\":\"IConverter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/yearn/IConverter.sol\":{\"keccak256\":\"0x52cb341e637cfe41e6af3d75c6ad5fef0ce9265d1f526ffac077959a7d633612\",\"urls\":[\"bzz-raw://6cc3f01367485cc748eff0f6276548e7f631d89d2805e6e6c10f494e21b7b6fe\",\"dweb:/ipfs/QmP3eBP9o1F3dMX32Dg6XjfrzfncrtS6mykWnD3FvMjucA\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.5.17;\n\ninterface IConverter {\n    function convert(address) external returns (uint256);\n}\n",
+  "sourcePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/yearn/IConverter.sol",
+  "ast": {
+    "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/yearn/IConverter.sol",
+    "exportedSymbols": {
+      "IConverter": [
+        34414
+      ]
+    },
+    "id": 34415,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34406,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:57"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 34414,
+        "linearizedBaseContracts": [
+          34414
+        ],
+        "name": "IConverter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 34413,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "convert",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34409,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34408,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34413,
+                  "src": "103:7:57",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34407,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "103:7:57",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "102:9:57"
+            },
+            "returnParameters": {
+              "id": 34412,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34411,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34413,
+                  "src": "130:7:57",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34410,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "130:7:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "129:9:57"
+            },
+            "scope": 34414,
+            "src": "86:53:57",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 34415,
+        "src": "59:82:57"
+      }
+    ],
+    "src": "33:109:57"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/yearn/IConverter.sol",
+      "exportedSymbols": {
+        "IConverter": [
+          34414
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".17"
+          ]
+        },
+        "id": 34406,
+        "name": "PragmaDirective",
+        "src": "33:24:57"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            34414
+          ],
+          "name": "IConverter",
+          "scope": 34415
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "convert",
+              "scope": 34414,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 34413,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 34407,
+                        "name": "ElementaryTypeName",
+                        "src": "103:7:57"
+                      }
+                    ],
+                    "id": 34408,
+                    "name": "VariableDeclaration",
+                    "src": "103:7:57"
+                  }
+                ],
+                "id": 34409,
+                "name": "ParameterList",
+                "src": "102:9:57"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 34413,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 34410,
+                        "name": "ElementaryTypeName",
+                        "src": "130:7:57"
+                      }
+                    ],
+                    "id": 34411,
+                    "name": "VariableDeclaration",
+                    "src": "130:7:57"
+                  }
+                ],
+                "id": 34412,
+                "name": "ParameterList",
+                "src": "129:9:57"
+              }
+            ],
+            "id": 34413,
+            "name": "FunctionDefinition",
+            "src": "86:53:57"
+          }
+        ],
+        "id": 34414,
+        "name": "ContractDefinition",
+        "src": "59:82:57"
+      }
+    ],
+    "id": 34415,
+    "name": "SourceUnit",
+    "src": "33:109:57"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-02-12T05:40:28.454Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

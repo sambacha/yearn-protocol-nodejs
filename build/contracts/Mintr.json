@@ -1,0 +1,254 @@
+{
+  "contractName": "Mintr",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"mint\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/Mintr.sol\":\"Mintr\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/Mintr.sol\":{\"keccak256\":\"0xc804f5f6d22d2bbf77faad0d3e84b342dbeb99b7fc16a74e518a40a33c3c498c\",\"urls\":[\"bzz-raw://461d00e08864ec5c02e251c27286a0ac7eb5d201c64aaf460161306461e8dd6a\",\"dweb:/ipfs/QmeXe1AYBGEU1mYPjkxoXriCCBb9yUCBM5d8Ffz3CsnaDc\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.5.17;\n\ninterface Mintr {\n    function mint(address) external;\n}\n",
+  "sourcePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/Mintr.sol",
+  "ast": {
+    "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/Mintr.sol",
+    "exportedSymbols": {
+      "Mintr": [
+        33809
+      ]
+    },
+    "id": 33810,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33803,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:48"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 33809,
+        "linearizedBaseContracts": [
+          33809
+        ],
+        "name": "Mintr",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 33808,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33806,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33805,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33808,
+                  "src": "95:7:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33804,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "95:7:48",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "94:9:48"
+            },
+            "returnParameters": {
+              "id": 33807,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "112:0:48"
+            },
+            "scope": 33809,
+            "src": "81:32:48",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 33810,
+        "src": "59:56:48"
+      }
+    ],
+    "src": "33:83:48"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/sbacha/yearn-protocol-nodejs/interfaces/curve/Mintr.sol",
+      "exportedSymbols": {
+        "Mintr": [
+          33809
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".17"
+          ]
+        },
+        "id": 33803,
+        "name": "PragmaDirective",
+        "src": "33:24:48"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            33809
+          ],
+          "name": "Mintr",
+          "scope": 33810
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "mint",
+              "scope": 33809,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 33808,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 33804,
+                        "name": "ElementaryTypeName",
+                        "src": "95:7:48"
+                      }
+                    ],
+                    "id": 33805,
+                    "name": "VariableDeclaration",
+                    "src": "95:7:48"
+                  }
+                ],
+                "id": 33806,
+                "name": "ParameterList",
+                "src": "94:9:48"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 33807,
+                "name": "ParameterList",
+                "src": "112:0:48"
+              }
+            ],
+            "id": 33808,
+            "name": "FunctionDefinition",
+            "src": "81:32:48"
+          }
+        ],
+        "id": 33809,
+        "name": "ContractDefinition",
+        "src": "59:56:48"
+      }
+    ],
+    "id": 33810,
+    "name": "SourceUnit",
+    "src": "33:83:48"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-02-12T05:40:28.418Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
