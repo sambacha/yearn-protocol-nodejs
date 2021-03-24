@@ -1,7 +1,2 @@
-__pycache__
-.history
-.hypothesis/
-#build/
-#reports/
-node_modules/
 .DS_Store
+node_modules
