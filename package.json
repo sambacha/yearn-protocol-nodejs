@@ -1,6 +1,22 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "yearn-protocol-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambacha/yearn-protocol-nodejs.git"
+  },
+  "keywords": [],
+  "author": "Yearn Finance",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sambacha/yearn-protocol-nodejs/issues"
+  },
+  "homepage": "https://github.com/sambacha/yearn-protocol-nodejs#readme",
   "devDependencies": {
     "lerna": "^4.0.0"
   }

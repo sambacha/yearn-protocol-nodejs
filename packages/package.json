@@ -2,10 +2,62 @@
   "name": "yearn-protocol",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "files": [
+    "artifacts/*",
+    "contracts/*",
+    "types/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "npx hardhat compile",
+    "test": "bash scripts/test.sh",
+    "gcli": "ganache-cli -l 8000000 -m \"fetch local valve black attend double eye excite planet primary install allow\"",
+    "lint:tests": "eslint test/*.js",
+    "coverage": "SOLIDITY_COVERAGE=true bash scripts/test.sh",
+    "fmt": "npx prettier --config .prettierrc.js --write ."
   },
-  "author": "sam",
-  "license": "AGPL-3.0"
+  "author": "Yearn Finance",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-typescript": "^7.13.0",
+    "@nomiclabs/hardhat-etherscan": "^2.1.0",
+    "@nomiclabs/hardhat-truffle5": "^2.0.0",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@typechain/ethers-v5": "^6.0.5",
+    "@typechain/hardhat": "^1.0.1",
+    "@types/fs-extra": "^9.0.8",
+    "@typescript-eslint/parser": "^4.19.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
+    "decimal.js": "^10.2.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eth-lightwallet": "3.0.0",
+    "fs-extra": "^7.0.1",
+    "hardhat": "^2.1.1",
+    "hardhat-contract-sizer": "^2.0.3",
+    "hardhat-deploy": "^0.7.0-beta.49",
+    "hardhat-deploy-ethers": "^0.3.0-beta.7",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.6",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.19.2",
+    "typescript": "^4.0.5",
+    "web3": "^1.3.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.5.1",
+    "solc": "^0.5.17"
+  }
 }
