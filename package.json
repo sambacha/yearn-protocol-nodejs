@@ -1,10 +1,10 @@
 {
   "name": "yearn-protocol-nodejs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "yearn protocol nodejs version",
+  "files": ["packages/*"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "npx lerna bootstrap"
   },
   "repository": {
     "type": "git",
