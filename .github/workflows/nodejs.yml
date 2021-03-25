@@ -34,4 +34,4 @@ jobs:
         run: cd packages/ && npm install
 
       - name: Run build
-        run: npm run build
+        run: npm run-script setup && npm run-script compile
