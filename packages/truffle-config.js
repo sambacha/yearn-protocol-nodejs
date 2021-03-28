@@ -29,6 +29,9 @@ module.exports = {
         solc: {
             version: "0.5.17",
             settings: {
+                metadata: {
+                    bytecodeHash: "none",
+                },
                 optimizer: {
                     enabled: true,
                     runs: 200,
@@ -39,8 +42,7 @@ module.exports = {
     api_keys: {
         etherscan: etherscanApiKey,
     },
-    plugins: ["truffle-plugin-verify", "@chainsafe/truffle-plugin-abigen"
-],
+    plugins: ["truffle-plugin-verify", "@chainsafe/truffle-plugin-abigen"],
     networks: {
         geth: {
             host: "localhost",
@@ -51,7 +53,7 @@ module.exports = {
             host: "127.0.0.1",
             port: 8545,
             network_id: 5777,
-            function() {
+            function () {
                 return new HDWalletProvider(
                     mnemonic,
                     `http://localhost:8545`,
