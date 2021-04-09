@@ -1,5 +1,3 @@
-// SPDX-License-Identifier: MIT
-
 pragma solidity ^0.5.17;
 
 import "@openzeppelinV2/contracts/token/ERC20/IERC20.sol";
@@ -7,33 +5,45 @@ import "@openzeppelinV2/contracts/math/SafeMath.sol";
 import "@openzeppelinV2/contracts/utils/Address.sol";
 import "@openzeppelinV2/contracts/token/ERC20/SafeERC20.sol";
 
-import "../../interfaces/dforce/Rewards.sol";
-import "../../interfaces/dforce/Token.sol";
-import "../../interfaces/uniswap/Uni.sol";
-
 import "../../interfaces/yearn/IController.sol";
+import "../../interfaces/curve/Gauge.sol";
+import "../../interfaces/curve/Mintr.sol";
+import "../../interfaces/uniswap/Uni.sol";
+import "../../interfaces/curve/Curve.sol";
+import "../../interfaces/yearn/IToken.sol";
+import "../../interfaces/yearn/IVoterProxy.sol";
 
-contract StrategyDForceUSDT {
+contract StrategyCurve3CrvVoterProxy {
     using SafeERC20 for IERC20;
     using Address for address;
     using SafeMath for uint256;
 
-    address public constant want = address(0xdAC17F958D2ee523a2206206994597C13D831ec7);
-    address public constant d = address(0x868277d475E0e475E38EC5CdA2d9C83B5E1D9fc8);
-    address public constant pool = address(0x324EebDAa45829c6A8eE903aFBc7B61AF48538df);
-    address public constant df = address(0x431ad2ff6a9C365805eBaD47Ee021148d6f7DBe0);
+    address public constant want = address(0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490);
+    address public constant crv = address(0xD533a949740bb3306d119CC777fa900bA034cd52);
     address public constant uni = address(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D);
-    address public constant weth = address(0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2); // used for df <> weth <> usdc route
+    address public constant weth = address(0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2); // used for crv <> weth <> dai route
 
-    uint256 public performanceFee = 5000;
-    uint256 public constant performanceMax = 10000;
+    address public constant dai = address(0x6B175474E89094C44Da98b954EedeAC495271d0F);
+    address public constant curve = address(0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7);
 
+    address public constant gauge = address(0xbFcF63294aD7105dEa65aA58F8AE5BE2D9d0952A);
+    address public constant voter = address(0xF147b8125d2ef93FB6965Db97D6746952a133934);
+
+    uint256 public keepCRV = 1000;
+    uint256 public performanceFee = 450;
+    uint256 public strategistReward = 50;
     uint256 public withdrawalFee = 50;
-    uint256 public constant withdrawalMax = 10000;
+    uint256 public constant FEE_DENOMINATOR = 10000;
+
+    address public proxy;
 
     address public governance;
     address public controller;
     address public strategist;
+
+    uint256 public earned; // lifetime strategy earnings denominated in `want` token
+
+    event Harvested(uint256 wantEarned, uint256 lifetimeEarned);
 
     constructor(address _controller) public {
         governance = msg.sender;
@@ -42,12 +52,17 @@ contract StrategyDForceUSDT {
     }
 
     function getName() external pure returns (string memory) {
-        return "StrategyDForceUSDT";
+        return "StrategyCurve3CrvVoterProxy";
     }
 
     function setStrategist(address _strategist) external {
-        require(msg.sender == governance, "!governance");
+        require(msg.sender == governance || msg.sender == strategist, "!authorized");
         strategist = _strategist;
+    }
+
+    function setKeepCRV(uint256 _keepCRV) external {
+        require(msg.sender == governance, "!governance");
+        keepCRV = _keepCRV;
     }
 
     function setWithdrawalFee(uint256 _withdrawalFee) external {
@@ -60,19 +75,21 @@ contract StrategyDForceUSDT {
         performanceFee = _performanceFee;
     }
 
+    function setStrategistReward(uint256 _strategistReward) external {
+        require(msg.sender == governance, "!governance");
+        strategistReward = _strategistReward;
+    }
+
+    function setProxy(address _proxy) external {
+        require(msg.sender == governance, "!governance");
+        proxy = _proxy;
+    }
+
     function deposit() public {
         uint256 _want = IERC20(want).balanceOf(address(this));
         if (_want > 0) {
-            IERC20(want).safeApprove(d, 0);
-            IERC20(want).safeApprove(d, _want);
-            dERC20(d).mint(address(this), _want);
-        }
-
-        uint256 _d = IERC20(d).balanceOf(address(this));
-        if (_d > 0) {
-            IERC20(d).safeApprove(pool, 0);
-            IERC20(d).safeApprove(pool, _d);
-            dRewards(pool).stake(_d);
+            IERC20(want).safeTransfer(proxy, _want);
+            IVoterProxy(proxy).deposit(gauge, want);
         }
     }
 
@@ -80,7 +97,8 @@ contract StrategyDForceUSDT {
     function withdraw(IERC20 _asset) external returns (uint256 balance) {
         require(msg.sender == controller, "!controller");
         require(want != address(_asset), "want");
-        require(d != address(_asset), "d");
+        require(crv != address(_asset), "crv");
+        require(dai != address(_asset), "dai");
         balance = _asset.balanceOf(address(this));
         _asset.safeTransfer(controller, balance);
     }
@@ -94,13 +112,16 @@ contract StrategyDForceUSDT {
             _amount = _amount.add(_balance);
         }
 
-        uint256 _fee = _amount.mul(withdrawalFee).div(withdrawalMax);
+        uint256 _fee = _amount.mul(withdrawalFee).div(FEE_DENOMINATOR);
 
         IERC20(want).safeTransfer(IController(controller).rewards(), _fee);
         address _vault = IController(controller).vaults(address(want));
         require(_vault != address(0), "!vault"); // additional protection so we don't burn the funds
-
         IERC20(want).safeTransfer(_vault, _amount.sub(_fee));
+    }
+
+    function _withdrawSome(uint256 _amount) internal returns (uint256) {
+        return IVoterProxy(proxy).withdraw(gauge, want, _amount);
     }
 
     // Withdraw all funds, normally used when migrating strategies
@@ -116,47 +137,45 @@ contract StrategyDForceUSDT {
     }
 
     function _withdrawAll() internal {
-        dRewards(pool).exit();
-        uint256 _d = IERC20(d).balanceOf(address(this));
-        if (_d > 0) {
-            dERC20(d).redeem(address(this), _d);
-        }
+        IVoterProxy(proxy).withdrawAll(gauge, want);
     }
 
     function harvest() public {
         require(msg.sender == strategist || msg.sender == governance, "!authorized");
-        dRewards(pool).getReward();
-        uint256 _df = IERC20(df).balanceOf(address(this));
-        if (_df > 0) {
-            IERC20(df).safeApprove(uni, 0);
-            IERC20(df).safeApprove(uni, _df);
+        IVoterProxy(proxy).harvest(gauge);
+        uint256 _crv = IERC20(crv).balanceOf(address(this));
+        if (_crv > 0) {
+            uint256 _keepCRV = _crv.mul(keepCRV).div(FEE_DENOMINATOR);
+            IERC20(crv).safeTransfer(voter, _keepCRV);
+            _crv = _crv.sub(_keepCRV);
+
+            IERC20(crv).safeApprove(uni, 0);
+            IERC20(crv).safeApprove(uni, _crv);
 
             address[] memory path = new address[](3);
-            path[0] = df;
+            path[0] = crv;
             path[1] = weth;
-            path[2] = want;
+            path[2] = dai;
 
-            Uni(uni).swapExactTokensForTokens(_df, uint256(0), path, address(this), now.add(1800));
+            Uni(uni).swapExactTokensForTokens(_crv, uint256(0), path, address(this), now.add(1800));
+        }
+        uint256 _dai = IERC20(dai).balanceOf(address(this));
+        if (_dai > 0) {
+            IERC20(dai).safeApprove(curve, 0);
+            IERC20(dai).safeApprove(curve, _dai);
+            ICurveFi(curve).add_liquidity([_dai, 0, 0], 0);
         }
         uint256 _want = IERC20(want).balanceOf(address(this));
         if (_want > 0) {
-            uint256 _fee = _want.mul(performanceFee).div(performanceMax);
+            uint256 _fee = _want.mul(performanceFee).div(FEE_DENOMINATOR);
+            uint256 _reward = _want.mul(strategistReward).div(FEE_DENOMINATOR);
             IERC20(want).safeTransfer(IController(controller).rewards(), _fee);
+            IERC20(want).safeTransfer(strategist, _reward);
             deposit();
         }
-    }
-
-    function _withdrawSome(uint256 _amount) internal returns (uint256) {
-        uint256 _d = _amount.mul(1e18).div(dERC20(d).getExchangeRate());
-        uint256 _before = IERC20(d).balanceOf(address(this));
-        dRewards(pool).withdraw(_d);
-        uint256 _after = IERC20(d).balanceOf(address(this));
-        uint256 _withdrew = _after.sub(_before);
-        _before = IERC20(want).balanceOf(address(this));
-        dERC20(d).redeem(address(this), _withdrew);
-        _after = IERC20(want).balanceOf(address(this));
-        _withdrew = _after.sub(_before);
-        return _withdrew;
+        IVoterProxy(proxy).lock();
+        earned = earned.add(_want);
+        emit Harvested(_want, earned);
     }
 
     function balanceOfWant() public view returns (uint256) {
@@ -164,19 +183,11 @@ contract StrategyDForceUSDT {
     }
 
     function balanceOfPool() public view returns (uint256) {
-        return (dRewards(pool).balanceOf(address(this))).mul(dERC20(d).getExchangeRate()).div(1e18);
-    }
-
-    function getExchangeRate() public view returns (uint256) {
-        return dERC20(d).getExchangeRate();
-    }
-
-    function balanceOfD() public view returns (uint256) {
-        return dERC20(d).getTokenBalance(address(this));
+        return IVoterProxy(proxy).balanceOf(gauge);
     }
 
     function balanceOf() public view returns (uint256) {
-        return balanceOfWant().add(balanceOfD()).add(balanceOfPool());
+        return balanceOfWant().add(balanceOfPool());
     }
 
     function setGovernance(address _governance) external {
