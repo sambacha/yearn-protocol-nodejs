@@ -1,10 +1,22 @@
-# Yearn Protocol
+
+<!-- copyright 2020 yearn.finance && the contributors -->
+<p align="center">
+ <img src="https://raw.githubusercontent.com/gist/sambacha/9a62174a080ead34271ff5d187a24343/raw/02cad2900f4cedb87895cc57729030e095d2869f/gh_banner.svg" align="right" width="350">
+	<h1 align="left">Yearn Protocol</h1>
+ <h3 align="center"> </h3>
+ <p align="center">
+<align="center">
+ </center>
 
 > NodeJS Version
 
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://github.com/iearn-finance/yearn-protocol/blob/master/LICENSE)
 ![Lint](https://github.com/iearn-finance/yearn-protocol/workflows/Lint/badge.svg)
 ![Test](https://github.com/iearn-finance/yearn-protocol/workflows/Test/badge.svg)
+
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/iearnfinance.svg?label=iearnfinance&style=social)](https://twitter.com/iearnfinance) [![Discord](https://img.shields.io/discord/734804446353031319.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/734804446353031319/) [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/yearnfinance) <img alt="Discourse users" src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fgov.yearn.finance%2F">
+
 
 Yearn Protocol is a set of Ethereum Smart Contracts focused on creating a simple way to generate high risk-adjusted returns for depositors of various assets via best-in-class lending protocols, liquidity pools, and community-made yield farming strategies on Ethereum.
 
@@ -23,21 +35,6 @@ To run the project you need:
 -   Local env variables for [Etherscan API](https://etherscan.io/apis) and [Infura](https://infura.io/) (`ETHERSCAN_TOKEN`, `WEB3_INFURA_PROJECT_ID`).
 -   Local Ganache environment installed with `npm install -g ganache-cli@6.11`.
 
-<!-- copyright 2020 yearn.finance && the contributors -->
-<p align="center">
- <img src="https://raw.githubusercontent.com/gist/sambacha/9a62174a080ead34271ff5d187a24343/raw/02cad2900f4cedb87895cc57729030e095d2869f/gh_banner.svg" align="right" width="350">
-	<h1 align="left">Yearn Finance Ecosystem Tokenlist </h1>
- <h3 align="center"> </h3>
- <p align="center">
-<align="center">
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/iearnfinance.svg?label=iearnfinance&style=social)](https://twitter.com/iearnfinance) [![Discord](https://img.shields.io/discord/734804446353031319.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/734804446353031319/) [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/yearnfinance) <img alt="Discourse users" src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fgov.yearn.finance%2F">
-
- </center>
-  </p>
-</p>
-<br />
-<br />
 
 ## Resources
 
