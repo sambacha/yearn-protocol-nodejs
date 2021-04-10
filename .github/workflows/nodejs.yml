@@ -33,5 +33,5 @@ jobs:
       - name: Install npm dependencies
         run: cd packages/ && npm install
 
-      - name: check for postinstall complete
-        run: ls node_modules/@openzeppelinV2
+      - name: HardHat Compile
+        run: npx hardhat compile
