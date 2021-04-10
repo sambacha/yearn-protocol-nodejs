@@ -28,7 +28,7 @@
 		"postinstall": "mv node_modules/@openzeppelin node_modules/@openzeppelinV2"
 	},
 	"dependencies": {
-		"@openzeppelin/contracts": "2.5.1"
+		"@openzeppelin/contracts": "3.1.0"
 	},
 	"devDependencies": {
 		"@chainsafe/truffle-plugin-abigen": "0.0.2",
