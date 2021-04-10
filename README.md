@@ -43,32 +43,6 @@ To run the project you need:
 - [https://github.com/Uniswap/token-lists](https://github.com/Uniswap/token-lists)
 - [Semantic versioning](https://github.com/Uniswap/token-lists/blob/master/README.md#semantic-versioning)
 
-## Overview
-
-```bash
-npm install yearn-tokenlist
-```
-
-[npm yearn-tokenlist](https://www.npmjs.com/package/yearn-tokenlist)
-
-<br>
-
-### Local Testing
-
-The `tokens.json` is validated against Uniswap's tokenlist schema.
-
-To test locally,
-
-```
-# Install dependencies
-npm install
-
-# Run test script
-npm start
-```
-
-If there is an error, the error will be output to the terminal.
-
 ## Deployed Contracts Registry
 
 Below is a list of relevant smart contracts and Github repositories for using and interacting with the Yearn product suite.
