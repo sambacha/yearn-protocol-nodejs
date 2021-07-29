@@ -1,0 +1,1881 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "callerStrategy",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "profit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "loss",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "debtPayment",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "debtOutstanding",
+          "type": "uint256"
+        }
+      ],
+      "name": "check",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "togglePass",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "11": "contracts/interfaces/ICustomHealthCheck.sol",
+    "13": "contracts/test/TestHealthCheck.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/test/TestHealthCheck.sol",
+    "exportedSymbols": {
+      "TestHealthCheck": [
+        3333
+      ]
+    },
+    "id": 3334,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3289,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:13"
+      },
+      {
+        "absolutePath": "/Users/sbacha/.brownie/packages/OpenZeppelin/openzeppelin-contracts@3.1.0/contracts/token/ERC20/ERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "id": 3290,
+        "nodeType": "ImportDirective",
+        "scope": 3334,
+        "sourceUnit": 5899,
+        "src": "58:55:13",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "contracts/interfaces/ICustomHealthCheck.sol",
+        "file": "../interfaces/ICustomHealthCheck.sol",
+        "id": 3292,
+        "nodeType": "ImportDirective",
+        "scope": 3334,
+        "sourceUnit": 2810,
+        "src": "115:72:13",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 3291,
+              "name": "ICustomHealthCheck",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "123:18:13",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3293,
+              "name": "ICustomHealthCheck",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2809,
+              "src": "217:18:13",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ICustomHealthCheck_$2809",
+                "typeString": "contract ICustomHealthCheck"
+              }
+            },
+            "id": 3294,
+            "nodeType": "InheritanceSpecifier",
+            "src": "217:18:13"
+          }
+        ],
+        "contractDependencies": [
+          2809
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3333,
+        "linearizedBaseContracts": [
+          3333,
+          2809
+        ],
+        "name": "TestHealthCheck",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3296,
+            "mutability": "mutable",
+            "name": "pass",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 3333,
+            "src": "242:9:13",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 3295,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "242:4:13",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3303,
+              "nodeType": "Block",
+              "src": "279:28:13",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3301,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3299,
+                      "name": "pass",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3296,
+                      "src": "289:4:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 3300,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "296:4:13",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "289:11:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3302,
+                  "nodeType": "ExpressionStatement",
+                  "src": "289:11:13"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3304,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3297,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "269:2:13"
+            },
+            "returnParameters": {
+              "id": 3298,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:13"
+            },
+            "scope": 3333,
+            "src": "258:49:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3312,
+              "nodeType": "Block",
+              "src": "344:29:13",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3310,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3307,
+                      "name": "pass",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3296,
+                      "src": "354:4:13",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3309,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "!",
+                      "prefix": true,
+                      "src": "361:5:13",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 3308,
+                        "name": "pass",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3296,
+                        "src": "362:4:13",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "354:12:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3311,
+                  "nodeType": "ExpressionStatement",
+                  "src": "354:12:13"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "83c0c184",
+            "id": 3313,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "togglePass",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3305,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "332:2:13"
+            },
+            "returnParameters": {
+              "id": 3306,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "344:0:13"
+            },
+            "scope": 3333,
+            "src": "313:60:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "baseFunctions": [
+              2808
+            ],
+            "body": {
+              "id": 3331,
+              "nodeType": "Block",
+              "src": "578:28:13",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3329,
+                    "name": "pass",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3296,
+                    "src": "595:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 3328,
+                  "id": 3330,
+                  "nodeType": "Return",
+                  "src": "588:11:13"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "45901be0",
+            "id": 3332,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 3325,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "554:8:13"
+            },
+            "parameters": {
+              "id": 3324,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3315,
+                  "mutability": "mutable",
+                  "name": "callerStrategy",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3332,
+                  "src": "403:22:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3314,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "403:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3317,
+                  "mutability": "mutable",
+                  "name": "profit",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3332,
+                  "src": "435:14:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3316,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "435:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3319,
+                  "mutability": "mutable",
+                  "name": "loss",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3332,
+                  "src": "459:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3318,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "459:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3321,
+                  "mutability": "mutable",
+                  "name": "debtPayment",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3332,
+                  "src": "481:19:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3320,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "481:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3323,
+                  "mutability": "mutable",
+                  "name": "debtOutstanding",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3332,
+                  "src": "510:23:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3322,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "510:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "393:146:13"
+            },
+            "returnParameters": {
+              "id": 3328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3327,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3332,
+                  "src": "572:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3326,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "572:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "571:6:13"
+            },
+            "scope": 3333,
+            "src": "379:227:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3334,
+        "src": "189:419:13"
+      }
+    ],
+    "src": "32:577:13"
+  },
+  "bytecode": "608060405234801561001057600080fd5b506000805460ff1916600117905560e78061002c6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806345901be014603757806383c0c184146086575b600080fd5b6072600480360360a0811015604b57600080fd5b506001600160a01b038135169060208101359060408101359060608101359060800135608e565b604080519115158252519081900360200190f35b608c609d565b005b60005460ff1695945050505050565b6000805460ff19811660ff9091161517905556fea2646970667358221220304a39e253ff60ecf48e0d9e959d67bc6f9f865e30de8bf1f2aa9c2d1151d06c64736f6c634300060c0033",
+  "bytecodeSha1": "a44a58914cd7a30d530245467c7cce385e2a760d",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "TestHealthCheck",
+  "coverageMap": {
+    "branches": {
+      "11": {},
+      "13": {}
+    },
+    "statements": {
+      "11": {},
+      "13": {
+        "TestHealthCheck.check": {
+          "0": [
+            588,
+            599
+          ]
+        },
+        "TestHealthCheck.togglePass": {
+          "1": [
+            354,
+            366
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "ICustomHealthCheck"
+  ],
+  "deployedBytecode": "6080604052348015600f57600080fd5b506004361060325760003560e01c806345901be014603757806383c0c184146086575b600080fd5b6072600480360360a0811015604b57600080fd5b506001600160a01b038135169060208101359060408101359060608101359060800135608e565b604080519115158252519081900360200190f35b608c609d565b005b60005460ff1695945050505050565b6000805460ff19811660ff9091161517905556fea2646970667358221220304a39e253ff60ecf48e0d9e959d67bc6f9f865e30de8bf1f2aa9c2d1151d06c64736f6c634300060c0033",
+  "deployedSourceMap": "189:419:13:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;379:227;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;379:227:13;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;313:60;;;:::i;:::-;;379:227;572:4;595;;;379:227;;;;;;;:::o;313:60::-;362:4;;;-1:-1:-1;;354:12:13;;362:4;;;;361:5;354:12;;;313:60::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    189,
+    608
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x45901BE0 EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0x83C0C184 EQ PUSH1 0x86 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x72 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0xA0 DUP2 LT ISZERO PUSH1 0x4B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 CALLDATALOAD AND SWAP1 PUSH1 0x20 DUP2 ADD CALLDATALOAD SWAP1 PUSH1 0x40 DUP2 ADD CALLDATALOAD SWAP1 PUSH1 0x60 DUP2 ADD CALLDATALOAD SWAP1 PUSH1 0x80 ADD CALLDATALOAD PUSH1 0x8E JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x8C PUSH1 0x9D JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND SWAP6 SWAP5 POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT DUP2 AND PUSH1 0xFF SWAP1 SWAP2 AND ISZERO OR SWAP1 SSTORE JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 ADDRESS 0x4A CODECOPY 0xE2 MSTORE8 SELFDESTRUCT PUSH1 0xEC DELEGATECALL DUP15 0xD SWAP15 SWAP6 SWAP14 PUSH8 0xBC6F9F865E30DE8B CALL CALLCODE 0xAA SWAP13 0x2D GT MLOAD 0xD0 PUSH13 0x64736F6C634300060C00330000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "MSTORE",
+      "path": "13"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "CALLVALUE",
+      "path": "13"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "ISZERO",
+      "path": "13"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0xF"
+    },
+    "10": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "JUMPI",
+      "path": "13"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "14": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "REVERT",
+      "path": "13"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "POP",
+      "path": "13"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x4"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "CALLDATASIZE",
+      "path": "13"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "LT",
+      "path": "13"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x32"
+    },
+    "23": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "JUMPI",
+      "path": "13"
+    },
+    "24": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "CALLDATALOAD",
+      "path": "13"
+    },
+    "27": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0xE0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "SHR",
+      "path": "13"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH4",
+      "path": "13",
+      "value": "0x45901BE0"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "EQ",
+      "path": "13"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x37"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "JUMPI",
+      "path": "13"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH4",
+      "path": "13",
+      "value": "0x83C0C184"
+    },
+    "46": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "EQ",
+      "path": "13"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x86"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "JUMPI",
+      "path": "13"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "54": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        189,
+        608
+      ],
+      "op": "REVERT",
+      "path": "13"
+    },
+    "55": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "56": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x72"
+    },
+    "58": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x4"
+    },
+    "60": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "61": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "CALLDATASIZE",
+      "path": "13"
+    },
+    "62": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SUB",
+      "path": "13"
+    },
+    "63": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0xA0"
+    },
+    "65": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP2",
+      "path": "13"
+    },
+    "66": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "LT",
+      "path": "13"
+    },
+    "67": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "ISZERO",
+      "path": "13"
+    },
+    "68": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x4B"
+    },
+    "70": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "JUMPI",
+      "path": "13"
+    },
+    "71": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x0"
+    },
+    "73": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "74": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "REVERT",
+      "path": "13"
+    },
+    "75": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "76": {
+      "op": "POP"
+    },
+    "77": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "79": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "81": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "83": {
+      "op": "SHL"
+    },
+    "84": {
+      "op": "SUB"
+    },
+    "85": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP2",
+      "path": "13"
+    },
+    "86": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "CALLDATALOAD",
+      "path": "13"
+    },
+    "87": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "AND",
+      "path": "13"
+    },
+    "88": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "89": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x20"
+    },
+    "91": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP2",
+      "path": "13"
+    },
+    "92": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "ADD",
+      "path": "13"
+    },
+    "93": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "CALLDATALOAD",
+      "path": "13"
+    },
+    "94": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "95": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x40"
+    },
+    "97": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP2",
+      "path": "13"
+    },
+    "98": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "ADD",
+      "path": "13"
+    },
+    "99": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "CALLDATALOAD",
+      "path": "13"
+    },
+    "100": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "101": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x60"
+    },
+    "103": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP2",
+      "path": "13"
+    },
+    "104": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "ADD",
+      "path": "13"
+    },
+    "105": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "CALLDATALOAD",
+      "path": "13"
+    },
+    "106": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "107": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x80"
+    },
+    "109": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "ADD",
+      "path": "13"
+    },
+    "110": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "CALLDATALOAD",
+      "path": "13"
+    },
+    "111": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x8E"
+    },
+    "113": {
+      "fn": "TestHealthCheck.check",
+      "jump": "i",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "JUMP",
+      "path": "13"
+    },
+    "114": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "115": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x40"
+    },
+    "117": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "118": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "MLOAD",
+      "path": "13"
+    },
+    "119": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP2",
+      "path": "13"
+    },
+    "120": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "ISZERO",
+      "path": "13"
+    },
+    "121": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "ISZERO",
+      "path": "13"
+    },
+    "122": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP3",
+      "path": "13"
+    },
+    "123": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "MSTORE",
+      "path": "13"
+    },
+    "124": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "MLOAD",
+      "path": "13"
+    },
+    "125": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "126": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "DUP2",
+      "path": "13"
+    },
+    "127": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "128": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SUB",
+      "path": "13"
+    },
+    "129": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x20"
+    },
+    "131": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "ADD",
+      "path": "13"
+    },
+    "132": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "133": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "RETURN",
+      "path": "13"
+    },
+    "134": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        313,
+        373
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "135": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        313,
+        373
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x8C"
+    },
+    "137": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        313,
+        373
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x9D"
+    },
+    "139": {
+      "fn": "TestHealthCheck.togglePass",
+      "jump": "i",
+      "offset": [
+        313,
+        373
+      ],
+      "op": "JUMP",
+      "path": "13"
+    },
+    "140": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        313,
+        373
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "141": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        313,
+        373
+      ],
+      "op": "STOP",
+      "path": "13"
+    },
+    "142": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "143": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        572,
+        576
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0x0"
+    },
+    "145": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        595,
+        599
+      ],
+      "op": "SLOAD",
+      "path": "13",
+      "statement": 0
+    },
+    "146": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        595,
+        599
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0xFF"
+    },
+    "148": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        595,
+        599
+      ],
+      "op": "AND",
+      "path": "13"
+    },
+    "149": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP6",
+      "path": "13"
+    },
+    "150": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "SWAP5",
+      "path": "13"
+    },
+    "151": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "POP",
+      "path": "13"
+    },
+    "152": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "POP",
+      "path": "13"
+    },
+    "153": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "POP",
+      "path": "13"
+    },
+    "154": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "POP",
+      "path": "13"
+    },
+    "155": {
+      "fn": "TestHealthCheck.check",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "POP",
+      "path": "13"
+    },
+    "156": {
+      "fn": "TestHealthCheck.check",
+      "jump": "o",
+      "offset": [
+        379,
+        606
+      ],
+      "op": "JUMP",
+      "path": "13"
+    },
+    "157": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        313,
+        373
+      ],
+      "op": "JUMPDEST",
+      "path": "13"
+    },
+    "158": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        362,
+        366
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "statement": 1,
+      "value": "0x0"
+    },
+    "160": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        362,
+        366
+      ],
+      "op": "DUP1",
+      "path": "13"
+    },
+    "161": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        362,
+        366
+      ],
+      "op": "SLOAD",
+      "path": "13"
+    },
+    "162": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "164": {
+      "op": "NOT"
+    },
+    "165": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        354,
+        366
+      ],
+      "op": "DUP2",
+      "path": "13"
+    },
+    "166": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        354,
+        366
+      ],
+      "op": "AND",
+      "path": "13"
+    },
+    "167": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        362,
+        366
+      ],
+      "op": "PUSH1",
+      "path": "13",
+      "value": "0xFF"
+    },
+    "169": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        362,
+        366
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "170": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        362,
+        366
+      ],
+      "op": "SWAP2",
+      "path": "13"
+    },
+    "171": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        362,
+        366
+      ],
+      "op": "AND",
+      "path": "13"
+    },
+    "172": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        361,
+        366
+      ],
+      "op": "ISZERO",
+      "path": "13"
+    },
+    "173": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        354,
+        366
+      ],
+      "op": "OR",
+      "path": "13"
+    },
+    "174": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        354,
+        366
+      ],
+      "op": "SWAP1",
+      "path": "13"
+    },
+    "175": {
+      "fn": "TestHealthCheck.togglePass",
+      "offset": [
+        354,
+        366
+      ],
+      "op": "SSTORE",
+      "path": "13"
+    },
+    "176": {
+      "fn": "TestHealthCheck.togglePass",
+      "jump": "o",
+      "offset": [
+        313,
+        373
+      ],
+      "op": "JUMP",
+      "path": "13"
+    }
+  },
+  "sha1": "8a95fb8b93e5720570ab844c38e82d115cbbe896",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.6.12;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\nimport {ICustomHealthCheck} from \"../interfaces/ICustomHealthCheck.sol\";\n\ncontract TestHealthCheck is ICustomHealthCheck {\n    bool pass;\n\n    constructor() public {\n        pass = true;\n    }\n\n    function togglePass() external {\n        pass = !pass;\n    }\n\n    function check(\n        address callerStrategy,\n        uint256 profit,\n        uint256 loss,\n        uint256 debtPayment,\n        uint256 debtOutstanding\n    ) external view override returns (bool) {\n        return pass;\n    }\n}\n",
+  "sourceMap": "189:419:13:-:0;;;258:49;;;;;;;;;-1:-1:-1;289:4:13;:11;;-1:-1:-1;;289:11:13;296:4;289:11;;;189:419;;;;;;",
+  "sourcePath": "contracts/test/TestHealthCheck.sol",
+  "type": "contract"
+}
