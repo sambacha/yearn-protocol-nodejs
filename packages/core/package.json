@@ -1,0 +1,13 @@
+{
+  "name": "yearn-finance-core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "contracts": "contracts"
+  },
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Yearn Finance",
+  "license": "AGPL-v3"
+}

