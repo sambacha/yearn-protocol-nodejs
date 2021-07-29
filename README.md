@@ -10,6 +10,11 @@
 
 > NodeJS Version
 
+```
+npm i yearn-finance-vaults@1.0.0
+```
+
+
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://github.com/iearn-finance/yearn-protocol/blob/master/LICENSE)
 ![Lint](https://github.com/iearn-finance/yearn-protocol/workflows/Lint/badge.svg)
 ![Test](https://github.com/iearn-finance/yearn-protocol/workflows/Test/badge.svg)
